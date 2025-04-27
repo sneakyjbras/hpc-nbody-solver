@@ -1,5 +1,5 @@
-#ifndef POINT_CALCULATIONS_HPP
-#define POINT_CALCULATIONS_HPP
+#ifndef POINTCALCULATIONS_HPP
+#define POINTCALCULATIONS_HPP
 
 #include <algorithm>
 #include <cmath>
@@ -16,7 +16,7 @@
  *               the wrapped index.
  * @param ncside The number of cells along one side of the grid.
  */
-inline void compute_wrap(int32_t &idx, int32_t ncside) {
+inline void computeWrap(int32_t &idx, int32_t ncside) {
   if (idx < 0 || idx >= ncside) {
     idx = ((idx % ncside) + ncside) % ncside;
   }
@@ -28,7 +28,7 @@ inline void compute_wrap(int32_t &idx, int32_t ncside) {
  * This function computes the cell index corresponding to a position along one
  * dimension. It divides the position by the length of a single cell to
  * determine the index. The resulting index is then wrapped into the valid range
- * using compute_wrap().
+ * using computeWrap().
  *
  * @param pos    The coordinate (either x or y) within the simulation space.
  * @param side   The total length of the simulation space along the given
@@ -36,11 +36,11 @@ inline void compute_wrap(int32_t &idx, int32_t ncside) {
  * @param ncside The number of cells per side of the grid.
  * @return int32_t The index of the grid cell that contains the position.
  */
-inline int32_t get_index(double pos, double side, int32_t ncside) {
-  double cell_side = side / ncside;
-  int32_t idx = static_cast<int32_t>(pos / cell_side);
-  compute_wrap(idx, ncside);
+inline int32_t getIndex(double pos, double side, int32_t ncside) {
+  double cellSide = side / ncside;
+  int32_t idx = static_cast<int32_t>(pos / cellSide);
+  computeWrap(idx, ncside);
   return idx;
 }
 
-#endif // POINT_CALCULATIONS_HPP
+#endif // POINTCALCULATIONS_HPP

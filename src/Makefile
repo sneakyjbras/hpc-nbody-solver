@@ -10,10 +10,10 @@ ifeq ($(DEBUG),1)
 endif
 
 # Source files
-CPP_SRCS = main.cpp parsim.cpp parsim_utils.cpp
+CPP_SRCS = main.cpp parsim.cpp parsimUtils.cpp
 
 # Header files
-HEADERS = ds.hpp parsim.hpp parsim_utils.hpp pointCalculations.hpp flatGrid2D.hpp
+HEADERS = ds.hpp parsim.hpp parsimUtils.hpp pointCalculations.hpp flatGrid2D.hpp
 
 # Object files
 CPP_OBJS = $(CPP_SRCS:.cpp=.o)

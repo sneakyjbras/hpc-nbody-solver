@@ -1,15 +1,23 @@
 #include "ds.hpp"
-#include "parsim_utils.hpp"
+#include "parsimUtils.hpp"
+#include <cstdint>
 using namespace std;
 
 #include "parsim.hpp"
 
 namespace Simulation {
 
+// Define thread_local variables.
+thread_local int32_t Parsim::rowStart;
+thread_local int32_t Parsim::rowEnd;
+thread_local int32_t Parsim::colStart;
+thread_local int32_t Parsim::colEnd;
+thread_local uint16_t Parsim::tid;
+
 Parsim::Parsim(int32_t inputSeed, double side, int32_t ncside, uint64_t nPart,
-               int32_t tsteps, MPI_Comm worldComm)
+               int32_t tsteps, uint16_t nThreads, MPI_Comm worldComm)
     : inputSeed(inputSeed), side(side), ncside(ncside), nPart(nPart),
-      tsteps(tsteps), worldComm(worldComm) {
+      tsteps(tsteps), nThreads(nThreads), worldComm(worldComm) {
   int32_t err;
 
   // Create global communicator rank and size.
@@ -63,12 +71,6 @@ Parsim::Parsim(int32_t inputSeed, double side, int32_t ncside, uint64_t nPart,
     std::cerr << "Error: MPI_Cart_coords failed." << std::endl;
     MPI_Abort(worldComm, err);
   }
-
-  // Compute the subdomain for each process and get its neighbors.
-  computeSubdomain();
-
-  // Initialize particles.
-  initParticles();
 }
 
 Parsim::~Parsim() {}
@@ -80,55 +82,57 @@ uint64_t Parsim::simulate(std::unordered_set<Particle *> &visited,
   uint64_t collisions = 0;
   for (int32_t t = 0; t < tsteps; ++t) {
     computeCenterOfMass();
-    MPI_Barrier(worldComm);
-    exchangeCOM();
+#pragma omp barrier
+#pragma omp master
+    {
+      exchangeCOM();
+    }
+#pragma omp barrier
     computeGravitationalPull();
+#pragma omp barrier
     computePositionVelocity();
-    MPI_Barrier(worldComm);
-    exchangePar();
+#pragma omp barrier
+#pragma omp master
+    {
+      exchangePar();
+    }
+#pragma omp barrier
     recomputeGrid();
+#pragma omp barrier
     collisions += computeCollisions(visited, q);
+#pragma omp barrier
   }
+
   // debugParticles(particles.data(), particles.size());
-  gatherParticle0();
-  return reduceCollisionCount(collisions);
+  return collisions;
 }
 
 // Assuming FlatGrid2D, Cell, and other types are already defined.
 
 void Parsim::allocateGrid() {
-  // Initialize the grid with the local subdomain dimensions.
-  grid = FlatGrid2D<Cell>(sub.localRows, sub.localCols);
+  uint64_t reserveCount = 0;
+  uint32_t neighCount = ranks.size();
+#pragma omp single
+  {
 
-  // Determine the number of neighboring processes.
-  std::uint32_t neighCount = ranks.size();
+    for (uint32_t i = 0; i < neighCount; ++i)
+      omp_init_lock(&rankLocks[i]);
 
-  // Reserve capacity for COM (Center-Of-Mass) exchange buffers.
-  // Reserve enough space to cover two rows (top and bottom), two columns (left
-  // and right), plus 4 for the corners.
-  sendComBuf.reserve(static_cast<std::uint64_t>(sub.localRows) * 2 +
-                     static_cast<std::uint64_t>(sub.localCols) * 2 + 4);
-  recvComBuf.reserve(static_cast<std::uint64_t>(sub.localRows) * 2 +
-                     static_cast<std::uint64_t>(sub.localCols) * 2 + 4);
+    // Initialize the grid with the local subdomain dimensions.
+    grid = FlatGrid2D<Cell>(sub.localRows, sub.localCols);
 
-  // Reserve space for counts and displacement arrays for COM communication.
-  sendCounts.reserve(neighCount);
-  recvCounts.reserve(neighCount);
-  sComDispls.reserve(neighCount);
-  rComDispls.reserve(neighCount);
-
-  // Estimate the average number of particles per cell.
-  // nPart/worldSize is the approximate number of particles per process.
-  std::uint64_t avgParticlesPerCell =
-      (nPart / worldSize) /
-      (static_cast<std::uint64_t>(sub.localRows) * sub.localCols);
-  // Use a factor of 4 for uniform or 8 for normal distributions (based on
-  // inputSeed).
-  std::uint64_t reserveCount =
-      (inputSeed >= 0 ? 4 : 8) * (avgParticlesPerCell + 1);
-
+    // Estimate the average number of particles per cell.
+    // nPart/worldSize is the approximate number of particles per process.
+    std::uint64_t avgParticlesPerCell =
+        (nPart / worldSize) /
+        (static_cast<std::uint64_t>(sub.localRows) * sub.localCols);
+    // Use a factor of 4 for uniform or 8 for normal distributions (based on
+    // inputSeed).
+    reserveCount = (inputSeed >= 0 ? 4 : 8) * (avgParticlesPerCell + 1);
+  }
   // For each cell in the local grid, reserve space for its particle vector.
   // Also, initialize each cell’s COM index.
+#pragma omp for schedule(static) collapse(2)
   for (int32_t i = 1; i <= sub.localRows; ++i) {
     for (int32_t j = 1; j <= sub.localCols; ++j) {
       grid.at(i, j).particles.reserve(reserveCount);
@@ -137,38 +141,61 @@ void Parsim::allocateGrid() {
     }
   }
 
-  // Reserve neighbor exchange vectors for particle migration.
-  parSendCounts.reserve(neighCount);
-  parSDispls.reserve(neighCount);
-  parRecvCounts.reserve(neighCount);
-  parRDispls.reserve(neighCount);
+#pragma omp master
+  {
+    // Reserve capacity for COM (Center-Of-Mass) exchange buffers.
+    // Reserve enough space to cover two rows (top and bottom), two columns
+    // (left and right), plus 4 for the corners.
+    sendComBuf.reserve(static_cast<std::uint64_t>(sub.localRows) * 2 +
+                       static_cast<std::uint64_t>(sub.localCols) * 2 + 4);
+    recvComBuf.reserve(static_cast<std::uint64_t>(sub.localRows) * 2 +
+                       static_cast<std::uint64_t>(sub.localCols) * 2 + 4);
 
-  // Estimate maximum number of local particles (with an extra margin).
-  std::uint64_t maxLocalParts = (nPart / worldSize) * (inputSeed >= 0 ? 4 : 8);
-  // Reserve buffers for sending and receiving particles during migration.
-  parSendBuffer.reserve(maxLocalParts);
-  parRecvBuffer.reserve(maxLocalParts);
+    // Reserve space for counts and displacement arrays for COM communication.
+    sendCounts.reserve(neighCount);
+    recvCounts.reserve(neighCount);
+    sComDispls.reserve(neighCount);
+    rComDispls.reserve(neighCount);
 
-  // Prepare the neighbor map (particleNeighborMap) for tracking particles that
-  // cross domain boundaries.
-  particleNeighborMap.clear();
-  for (int32_t nbr : ranks) {
-    particleNeighborMap[nbr].reserve(reserveCount / neighCount * 4);
+    // Reserve neighbor exchange vectors for particle migration.
+    parSendCounts.reserve(neighCount);
+    parSDispls.reserve(neighCount);
+    parRecvCounts.reserve(neighCount);
+    parRDispls.reserve(neighCount);
+
+    // Estimate maximum number of local particles (with an extra margin).
+    std::uint64_t maxLocalParts =
+        (nPart / worldSize) * (inputSeed >= 0 ? 4 : 8);
+    // Reserve buffers for sending and receiving particles during migration.
+    parSendBuffer.reserve(maxLocalParts);
+    parRecvBuffer.reserve(maxLocalParts);
+  }
+#pragma omp single
+  {
+    // Prepare the neighbor map (particleNeighborMap) for tracking particles
+    // that cross domain boundaries.
+    particleNeighborMap.clear();
+    for (int32_t nbr : ranks) {
+      particleNeighborMap[nbr].reserve(reserveCount / neighCount * 4);
+    }
   }
 }
 
 void Parsim::populateGrid() {
+#pragma omp for schedule(static)
   for (uint64_t i = 0; i < particles.size(); i++) {
     // Get global grid indices for the particle
-    int32_t col = get_index(particles[i].x, side, ncside);
-    int32_t row = get_index(particles[i].y, side, ncside);
+    int32_t col = getIndex(particles[i].x, side, ncside);
+    int32_t row = getIndex(particles[i].y, side, ncside);
 
     // Convert global to local coordinates
     int32_t localCol = col - sub.colStart;
     int32_t localRow = row - sub.rowStart;
 
     // Add particle to appropriate cell
+    omp_set_lock(&grid.at(localRow + 1, localCol + 1).lock);
     grid.at(localRow + 1, localCol + 1).addParticle(&particles[i]);
+    omp_unset_lock(&grid.at(localRow + 1, localCol + 1).lock);
   }
 }
 void Parsim::getAllNeighbors() {
@@ -220,6 +247,7 @@ void Parsim::getAllNeighbors() {
 }
 
 void Parsim::initializeCommunication() {
+
   int32_t err;
 
   // Process each neighbor in the neighborDirectionMap.
@@ -283,15 +311,15 @@ void Parsim::initializeCommunication() {
     MPI_Abort(worldComm, err);
   }
 
-  std::vector<int32_t> computedRecvcounts(sendCounts.size(), 0);
+  std::vector<int32_t> computedRecvCounts(sendCounts.size(), 0);
   err = MPI_Neighbor_alltoall(sendCounts.data(), 1, MPI_INT,
-                              computedRecvcounts.data(), 1, MPI_INT, graphComm);
+                              computedRecvCounts.data(), 1, MPI_INT, graphComm);
   if (err != MPI_SUCCESS) {
     std::cerr << "Error: MPI_Neighbor_alltoall failed." << std::endl;
     MPI_Abort(worldComm, err);
   }
 
-  recvCounts = computedRecvcounts;
+  recvCounts = computedRecvCounts;
 
   // Compute receive displacements from recvCounts.
   rComDispls.resize(recvCounts.size());
@@ -369,12 +397,12 @@ void Parsim::createMPIType() {
   }
 
   // --- Create MPI datatype for Particle ---
-  const int32_t pfieldCount = 8;
-  int32_t pBlockLengths[pfieldCount] = {1, 1, 1, 1, 1, 1, 1, 1};
-  MPI_Datatype pTypes[pfieldCount] = {MPI_UINT64_T, MPI_DOUBLE, MPI_DOUBLE,
+  const int32_t pFieldCount = 8;
+  int32_t pBlockLengths[pFieldCount] = {1, 1, 1, 1, 1, 1, 1, 1};
+  MPI_Datatype pTypes[pFieldCount] = {MPI_UINT64_T, MPI_DOUBLE, MPI_DOUBLE,
                                       MPI_DOUBLE,   MPI_DOUBLE, MPI_DOUBLE,
                                       MPI_DOUBLE,   MPI_DOUBLE};
-  MPI_Aint pDisplacements[pfieldCount] = {};
+  MPI_Aint pDisplacements[pFieldCount] = {};
 
   Particle dummyParticle;
   MPI_Aint pBase;
@@ -424,12 +452,12 @@ void Parsim::createMPIType() {
     std::cerr << "Error: MPI_Get_address failed for Particle.fy." << std::endl;
     MPI_Abort(worldComm, err);
   }
-  for (int32_t i = 0; i < pfieldCount; ++i) {
+  for (int32_t i = 0; i < pFieldCount; ++i) {
     pDisplacements[i] -= pBase;
   }
 
   MPI_Datatype rawParticleType;
-  err = MPI_Type_create_struct(pfieldCount, pBlockLengths, pDisplacements,
+  err = MPI_Type_create_struct(pFieldCount, pBlockLengths, pDisplacements,
                                pTypes, &rawParticleType);
   if (err != MPI_SUCCESS) {
     std::cerr << "Error: MPI_Type_create_struct failed for Particle."
@@ -460,8 +488,8 @@ void Parsim::createMPIType() {
 // 1: Simulation Steps
 
 void Parsim::computeCenterOfMass() {
-  for (int32_t i = 1; i <= sub.localRows; i++) {
-    for (int32_t j = 1; j <= sub.localCols; j++) {
+  for (int32_t i = rowStart; i <= rowEnd; i++) {
+    for (int32_t j = colStart; j <= colEnd; j++) {
       Cell &cell = grid.at(i, j);
       const auto &particles = cell.particles;
       cell.cm.reset();
@@ -560,6 +588,10 @@ void Parsim::computeExtracellPull(std::vector<Particle *> &particles,
     double fy = deltaY * G * (par->m * cm.m) * invD3;
 
     par->addForce(fx, fy);
+
+    // if (worldRank == 0)
+    //   if (!par->idx)
+    //     debugCellForce(par->idx, cm.idx, fx, fy, invD);
   }
 }
 
@@ -569,8 +601,8 @@ void Parsim::computeGravitationalPull() {
   const std::pair<int32_t, int32_t> offsets[8] = {
       {-1, -1}, {0, -1}, {1, -1}, {-1, 0}, {1, 0}, {-1, 1}, {0, 1}, {1, 1}};
 
-  for (int32_t i = 1; i <= sub.localRows; i++) {
-    for (int32_t j = 1; j <= sub.localCols; j++) {
+  for (int32_t i = rowStart; i <= rowEnd; i++) {
+    for (int32_t j = colStart; j <= colEnd; j++) {
       Cell &cell = grid.at(i, j);
       if (cell.particles.empty()) {
         continue;
@@ -579,9 +611,14 @@ void Parsim::computeGravitationalPull() {
       computeIncellPull(cell.particles);
     }
   }
-  extractAndUpdateGhostRegions();
-  for (int32_t i = 1; i <= sub.localRows; i++) {
-    for (int32_t j = 1; j <= sub.localCols; j++) {
+#pragma omp barrier
+#pragma omp master
+  {
+    extractAndUpdateGhostRegions();
+  }
+#pragma omp barrier
+  for (int32_t i = rowStart; i <= rowEnd; i++) {
+    for (int32_t j = colStart; j <= colEnd; j++) {
       Cell &cell = grid.at(i, j);
       if (cell.particles.empty()) {
         continue;
@@ -604,8 +641,8 @@ void Parsim::computeGravitationalPull() {
 
 void Parsim::recomputeGrid() {
   // First, process local cells: merge any internal incoming particles
-  for (int32_t i = 1; i <= sub.localRows; i++) {
-    for (int32_t j = 1; j <= sub.localCols; j++) {
+  for (int32_t i = rowStart; i <= rowEnd; i++) {
+    for (int32_t j = colStart; j <= colEnd; j++) {
       Cell &cell = grid.at(i, j);
       cell.processIncoming(); // Merge internal incoming particles.
       // Reset forces and clear collision lists.
@@ -615,52 +652,63 @@ void Parsim::recomputeGrid() {
       }
     }
   }
-  MPI_Wait(&requestPar, MPI_STATUS_IGNORE);
+#pragma omp master
+  {
+    MPI_Wait(&requestPar, MPI_STATUS_IGNORE);
+  }
+#pragma omp barrier
+
   // Now process the receive buffer.
+#pragma omp for schedule(static)
   for (uint32_t i = 0; i < parRecvBuffer.size(); ++i) {
     Particle *newParticle = new Particle(parRecvBuffer[i]);
 
     // Compute global grid indices for the particle.
-    int32_t col = get_index(newParticle->x, side, ncside);
-    int32_t row = get_index(newParticle->y, side, ncside);
+    int32_t col = getIndex(newParticle->x, side, ncside);
+    int32_t row = getIndex(newParticle->y, side, ncside);
 
     // Convert global indices to local indices.
     int32_t localCol = col - sub.colStart;
     int32_t localRow = row - sub.rowStart;
 
     // Add the new particle to the appropriate cell.
+    omp_set_lock(&grid.at(localRow + 1, localCol + 1).lock);
     grid.at(localRow + 1, localCol + 1).addParticle(newParticle);
+    omp_unset_lock(&grid.at(localRow + 1, localCol + 1).lock);
   }
 
-  // Clear com vectors
-  sendComBuf.clear();
-  recvComBuf.clear();
-  sendCounts.clear();
-  recvCounts.clear();
-  sComDispls.clear();
-  rComDispls.clear();
+#pragma omp master
+  {
+    // Clear com vectors
+    sendComBuf.clear();
+    recvComBuf.clear();
+    sendCounts.clear();
+    recvCounts.clear();
+    sComDispls.clear();
+    rComDispls.clear();
 
-  // Clear par vectors
-  parSendBuffer.clear();
-  parSendCounts.clear();
-  parSDispls.clear();
+    // Clear par vectors
+    parSendBuffer.clear();
+    parSendCounts.clear();
+    parSDispls.clear();
 
-  parRecvBuffer.clear();
-  parRecvCounts.clear();
-  parRDispls.clear();
+    parRecvBuffer.clear();
+    parRecvCounts.clear();
+    parRDispls.clear();
 
-  // Clear neighbor map
-  for (auto &entry : particleNeighborMap) {
-    entry.second.clear();
+    // Clear neighbor map
+    for (auto &entry : particleNeighborMap) {
+      entry.second.clear();
+    }
+    particleNeighborMap.clear();
   }
-  particleNeighborMap.clear();
 }
 
 // Example function that updates particles and then merges incoming particles
 // into the global grid, using a per-cell lock for safe updates.
 void Parsim::computePositionVelocity() {
-  for (int32_t i = 1; i <= sub.localRows; i++) {
-    for (int32_t j = 1; j <= sub.localCols; j++) {
+  for (int32_t i = rowStart; i <= rowEnd; i++) {
+    for (int32_t j = colStart; j <= colEnd; j++) {
       Cell &cell = grid.at(i, j);
       if (cell.particles.empty())
         continue;
@@ -671,8 +719,8 @@ void Parsim::computePositionVelocity() {
         par->computeVelocity();
 
         // Determine the particle's new cell coordinates
-        int32_t newRow = get_index(par->y, side, ncside);
-        int32_t newCol = get_index(par->x, side, ncside);
+        int32_t newRow = getIndex(par->y, side, ncside);
+        int32_t newCol = getIndex(par->x, side, ncside);
 
         if ((newRow >= sub.rowStart && newRow < sub.rowEnd) &&
             (newCol >= sub.colStart && newCol < sub.colEnd)) {
@@ -681,7 +729,9 @@ void Parsim::computePositionVelocity() {
           int32_t localRow = newRow - sub.rowStart;
           if ((localCol + 1 != j) || (localRow + 1 != i)) {
             cell.removeParticle(i);
+            omp_set_lock(&grid.at(localRow + 1, localCol + 1).lock);
             grid.at(localRow + 1, localCol + 1).addIncoming(par);
+            omp_unset_lock(&grid.at(localRow + 1, localCol + 1).lock);
           }
         } else {
 
@@ -690,7 +740,9 @@ void Parsim::computePositionVelocity() {
           // Remove the particle from the current cell.
           cell.removeParticle(i);
           // Directly add it to a new container keyed by destRank.
+          omp_set_lock(&rankLocks[destRank]);
           particleNeighborMap[destRank].push_back(*par);
+          omp_unset_lock(&rankLocks[destRank]);
         }
       }
     }
@@ -703,8 +755,8 @@ uint64_t Parsim::computeCollisions(std::unordered_set<Particle *> &visited,
   // 1. Detect collisions and mark colliding particles
   static constexpr double COLLISION_RADIUS = 5e-3;
   static constexpr double thresh2 = COLLISION_RADIUS * COLLISION_RADIUS;
-  for (int32_t i = 1; i <= sub.localRows; i++) {
-    for (int32_t j = 1; j <= sub.localCols; j++) {
+  for (int32_t i = rowStart; i <= rowEnd; i++) {
+    for (int32_t j = colStart; j <= colEnd; j++) {
       Cell &cell = grid.at(i, j);
       uint64_t numParticles = cell.particles.size();
       if (numParticles < 2)
@@ -737,8 +789,8 @@ uint64_t Parsim::computeCollisions(std::unordered_set<Particle *> &visited,
     }
   }
   // 2. Resolve collisions (group particles and remove from cells)
-  for (int32_t i = 1; i <= sub.localRows; i++) {
-    for (int32_t j = 1; j <= sub.localCols; j++) {
+  for (int32_t i = rowStart; i <= rowEnd; i++) {
+    for (int32_t j = colStart; j <= colEnd; j++) {
       Cell &cell = grid.at(i, j);
       int64_t numParticles = cell.particles.size();
       if (numParticles < 2)
@@ -780,6 +832,7 @@ uint64_t Parsim::computeCollisions(std::unordered_set<Particle *> &visited,
 // 2: Particle and Grid
 
 void Parsim::computeSubdomain() {
+  // MPI Subdomain
   int32_t rowsPerProc = ncside / dims[0];
   int32_t extraRows = ncside % dims[0];
 
@@ -794,6 +847,50 @@ void Parsim::computeSubdomain() {
 
   sub.localRows = sub.rowEnd - sub.rowStart;
   sub.localCols = sub.colEnd - sub.colStart;
+}
+
+void Parsim::computeThreadIndexes(const uint16_t &threadId) {
+  // Total threads in this MPI process.
+  uint16_t T = nThreads;
+
+  // Factor T into two numbers tRow and tCol such that tRow * tCol == T.
+  // For power-of-two T, one common strategy is to try to get them as equal as
+  // possible.
+  uint16_t tRow = (uint16_t)std::sqrt(T);
+  while (T % tRow != 0) { // Adjust tRow until it divides T evenly.
+    tRow--;
+  }
+  uint16_t tCol = T / tRow;
+
+  // Determine this thread's 2D index.
+  uint16_t threadRow = threadId / tCol;
+  uint16_t threadCol = threadId % tCol;
+
+  // Partition the local subdomain grid (sub.localRows x sub.localCols) among
+  // tRow and tCol.
+  uint32_t baseRows = sub.localRows / tRow;
+  uint32_t extraRows = sub.localRows % tRow;
+  uint32_t baseCols = sub.localCols / tCol;
+  uint32_t extraCols = sub.localCols % tCol;
+
+  // Calculate the starting row for this thread.
+  uint32_t startRow =
+      threadRow * baseRows + std::min((uint32_t)threadRow, extraRows);
+  uint32_t rowsForThread = baseRows + (threadRow < extraRows ? 1 : 0);
+  uint32_t endRow = startRow + rowsForThread - 1;
+
+  // Calculate the starting column for this thread.
+  uint32_t startCol =
+      threadCol * baseCols + std::min((uint32_t)threadCol, extraCols);
+  uint32_t colsForThread = baseCols + (threadCol < extraCols ? 1 : 0);
+  uint32_t endCol = startCol + colsForThread - 1;
+
+  // Convert 0-indexed coordinates to 1-indexed, assuming the rest of your code
+  // uses 1-indexing.
+  rowStart = startRow + 1;
+  rowEnd = endRow + 1;
+  colStart = startCol + 1;
+  colEnd = endCol + 1;
 }
 
 double Parsim::rndUniform01() {
@@ -831,8 +928,8 @@ void Parsim::initParticles() {
     double y = rnd01() * side;
 
     // Compute the column and row indices based on the particle's position.
-    int32_t col = get_index(x, side, ncside);
-    int32_t row = get_index(y, side, ncside);
+    int32_t col = getIndex(x, side, ncside);
+    int32_t row = getIndex(y, side, ncside);
     double vx = (rnd01() - 0.5) * side / ncside / 5.0;
     double vy = (rnd01() - 0.5) * side / ncside / 5.0;
     double m = rnd01() * 0.01 * (ncside * ncside) / nPart / G * EPSILON2;
@@ -1016,16 +1113,16 @@ void Parsim::gatherParticle0() {
       break;
   }
 
-  // 2) Point-to-point send/receive
+  // 3) Point-to-point send/receive
   if (worldRank != 0) {
     // Non-root ranks send only if they found it
     if (localParticle0.idx == 0) {
-      int err = MPI_Send(&localParticle0, // buffer
-                         1,               // count
-                         particleType,    // MPI_Datatype
-                         0,               // dest = rank 0
-                         TAG_PART0,       // tag
-                         worldComm);
+      int32_t err = MPI_Send(&localParticle0, // buffer
+                             1,               // count
+                             particleType,    // MPI_Datatype
+                             0,               // dest = rank 0
+                             TAG_PART0,       // tag
+                             worldComm);
       if (err != MPI_SUCCESS) {
         std::cerr << "Error: MPI_Send failed sending particle 0 from rank "
                   << worldRank << std::endl;
@@ -1039,7 +1136,7 @@ void Parsim::gatherParticle0() {
       globalParticle0 = localParticle0;
     } else {
       MPI_Status status;
-      int err =
+      int32_t err =
           MPI_Recv(&globalParticle0, // receive into globalParticle0
                    1,                // count
                    particleType,     // MPI_Datatype
@@ -1055,9 +1152,9 @@ void Parsim::gatherParticle0() {
   }
 }
 
-int32_t Parsim::reduceCollisionCount(int32_t local_collision) {
+int32_t Parsim::reduceCollisionCount(int32_t localCollision) {
   uint32_t globalCollision = 0;
-  int32_t err = MPI_Reduce(&local_collision, &globalCollision, 1, MPI_INT,
+  int32_t err = MPI_Reduce(&localCollision, &globalCollision, 1, MPI_INT,
                            MPI_SUM, 0, MPI_COMM_WORLD);
   if (err != MPI_SUCCESS) {
     std::cerr << "Error: MPI_Reduce failed in reduceCollisionCount."

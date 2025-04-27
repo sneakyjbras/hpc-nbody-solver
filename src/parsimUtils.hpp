@@ -1,5 +1,5 @@
-#ifndef PARSIM_UTILS_HPP
-#define PARSIM_UTILS_HPP
+#ifndef PARSIMUTILS_HPP
+#define PARSIMUTILS_HPP
 
 #include <iomanip>
 #include <iostream>
@@ -93,4 +93,4 @@ void debugCollision(const uint64_t &label1, const uint64_t &label2, double &d);
 
 } // namespace Simulation
 
-#endif // PARSIM_UTILS_HPP
+#endif // PARSIMUTILS_HPP

@@ -175,7 +175,7 @@ public:
    * @param formatter Optional function to format grid elements.
    */
   void
-  printGrid(std::function<std::string(const T &)> formatter = nullptr) const;
+  debugGrid(std::function<std::string(const T &)> formatter = nullptr) const;
 
   /**
    * @brief Debug method to print the halo (boundary) of the grid.

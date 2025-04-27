@@ -16,9 +16,11 @@
 #include <utility>
 #include <vector>
 
+#include <omp.h>
+
 #include "ds.hpp"
 #include "flatGrid2D.hpp"
-#include "parsim_utils.hpp"
+#include "parsimUtils.hpp"
 #include "pointCalculations.hpp"
 
 namespace Simulation {
@@ -32,6 +34,10 @@ namespace Simulation {
  */
 class Parsim {
 public:
+  // OMP indexes;
+  static thread_local int32_t rowStart, rowEnd, colStart, colEnd;
+  static thread_local uint16_t tid;
+
   //--------------------------------------------------------------------------
   // Constructors and Destructor
   //--------------------------------------------------------------------------
@@ -51,7 +57,7 @@ public:
    * @param worldComm MPI communicator for the simulation.
    */
   Parsim(int32_t inputSeed, double side, int32_t ncside, uint64_t nPart,
-         int32_t tsteps, MPI_Comm worldComm);
+         int32_t tsteps, uint16_t nThreads, MPI_Comm worldComm);
 
   /**
    * @brief Destructor for Parsim.
@@ -78,6 +84,21 @@ public:
    */
   uint64_t simulate(std::unordered_set<Particle *> &visited,
                     std::queue<Particle *> &q);
+
+  /**
+   * @brief Computes the simulation subdomain for the current MPI process.
+   */
+  void computeSubdomain();
+
+  /**
+   * @brief Initializes particle properties (position, velocity, mass, etc.).
+   *
+   * Depending on the sign of the seed parameter, particles are initialized
+   * using either a uniform or a normal distribution. Positions are scaled
+   * by the domain side length, velocities are adjusted by cell size, and masses
+   * are computed from simulation parameters.
+   */
+  void initParticles();
 
   /**
    * @brief Allocates memory for the simulation grid.
@@ -118,6 +139,11 @@ public:
   void createMPIType();
 
   /**
+   * @brief Computes the simulation subdomain for the current omp process.
+   */
+  void computeThreadIndexes(const uint16_t &tid);
+
+  /**
    * @brief Retrieves the first (global) particle.
    *
    * @return Particle representing the first particle in the global context.
@@ -138,6 +164,19 @@ public:
    */
   inline int32_t getWorldSize() { return worldSize; }
 
+  /**
+   * @brief Gathers the first particle's data (particle0) from all processes.
+   */
+  void gatherParticle0();
+
+  /**
+   * @brief Reduces the local collision count across MPI processes.
+   *
+   * @param localCollision The collision count from the local process.
+   * @return The reduced (global) collision count.
+   */
+  int32_t reduceCollisionCount(int32_t localCollision);
+
   //--------------------------------------------------------------------------
   // Private Simulation Core Functions
   //--------------------------------------------------------------------------
@@ -148,12 +187,12 @@ private:
   //--------------------------------------------------------------------------
 
   mutable int32_t inputSeed;
-  const double side;    ///< Domain side length.
-  const int32_t ncside; ///< Number of cells per side.
-  const uint64_t nPart; ///< Total number of particles.
-  const int32_t tsteps; ///< Number of timesteps.
+  const double side;       ///< Domain side length.
+  const int32_t ncside;    ///< Number of cells per side.
+  const uint64_t nPart;    ///< Total number of particles.
+  const int32_t tsteps;    ///< Number of timesteps.
+  const uint16_t nThreads; //< Number of omp threads.
   Particle localParticle0, globalParticle0;
-  bool has_p0 = false;
 
   // MPI communicator information.
   const int32_t periods[2] = {1, 1}; // 2D toroidal wrapping.
@@ -178,6 +217,9 @@ private:
   // Particle grouping by neighbor.
   std::unordered_map<int32_t, std::vector<Particle>> particleNeighborMap;
   std::unordered_map<int32_t, std::vector<GhostDirection>> neighborDirectionMap;
+
+  // Locks particle neighbor map by rank.
+  std::vector<omp_lock_t> rankLocks;
 
   // Communication buffers for particles.
   std::vector<Particle> parSendBuffer;
@@ -207,7 +249,7 @@ private:
           {GhostDirection::S, {+1, 0}}, {GhostDirection::SW, {+1, -1}},
           {GhostDirection::W, {0, -1}}, {GhostDirection::NW, {-1, -1}}};
 
-  subdomain_t sub; ///< Subdomain information.
+  Subdomain sub; ///< Subdomain information.
 
   // Random seed for particle initialization.
   uint32_t seed;
@@ -302,11 +344,6 @@ private:
   //--------------------------------------------------------------------------
 
   /**
-   * @brief Computes the simulation subdomain for the current MPI process.
-   */
-  void computeSubdomain();
-
-  /**
    * @brief Initializes the random seed.
    *
    * Sets the global seed variable by offsetting the provided input seed with a
@@ -333,29 +370,9 @@ private:
    */
   double rndNormal01();
 
-  /**
-   * @brief Initializes particle properties (position, velocity, mass, etc.).
-   *
-   * Depending on the sign of the seed parameter, particles are initialized
-   * using either a uniform or a normal distribution. Positions are scaled
-   * by the domain side length, velocities are adjusted by cell size, and masses
-   * are computed from simulation parameters.
-   */
-  void initParticles();
-
   //--------------------------------------------------------------------------
   // MPI Communication and Data Exchange
   //--------------------------------------------------------------------------
-
-  /**
-   * @brief Exchanges ghost cell data between neighboring MPI processes.
-   */
-  void exchange_ghost_cells();
-
-  /**
-   * @brief Exchanges particles that have moved between grid cells.
-   */
-  void exchange_moving_particles();
 
   /**
    * @brief Exchanges center-of-mass data between MPI processes.
@@ -367,11 +384,6 @@ private:
    */
   void exchangePar();
 
-  /**
-   * @brief Gathers the first particle's data (particle0) from all processes.
-   */
-  void gatherParticle0();
-
   //--------------------------------------------------------------------------
   // Auxiliary and Debug/Utility Functions
   //--------------------------------------------------------------------------
@@ -379,22 +391,22 @@ private:
   /**
    * @brief Prints the send buffer information for debugging.
    */
-  void debug_print_send() const;
+  void debugPrintSend() const;
 
   /**
    * @brief Prints the receive buffer information for debugging.
    */
-  void debug_print_recv() const;
+  void debugPrintRecv() const;
 
   /**
    * @brief Prints the MPI topology for debugging purposes.
    */
-  void debug_print_topology() const;
+  void debugPrintTopology() const;
 
   /**
    * @brief Prints the received data along with neighbor information.
    */
-  void debug_print_recv_with_neighbors() const;
+  void debugPrintRecvWithNeighbors() const;
 
   /**
    * @brief Extracts and updates ghost regions from received data.
@@ -410,14 +422,6 @@ private:
    */
   void updateGhostRegion(GhostDirection dir, const CenterOfMass *data,
                          int32_t count);
-
-  /**
-   * @brief Reduces the local collision count across MPI processes.
-   *
-   * @param local_collision The collision count from the local process.
-   * @return The reduced (global) collision count.
-   */
-  int32_t reduceCollisionCount(int32_t local_collision);
 
   /**
    * @brief Performs final clean-up and finalization of the simulation.

@@ -22,7 +22,7 @@ enum GhostDirection { N = 0, NE, E, SE, S, SW, W, NW };
 // Represents a rectangular subdomain within the simulation grid.
 // Stores the starting and ending indices for rows and columns, as well as
 // the number of local rows and columns in the subdomain.
-struct subdomain_t {
+struct Subdomain {
   int32_t rowStart, rowEnd;
   int32_t colStart, colEnd;
   int32_t localRows, localCols;
@@ -262,11 +262,11 @@ struct Cell {
    * Preallocates memory for the particles and incoming queue vectors to improve
    * performance when the expected number of particles is known.
    *
-   * @param num_particles Expected number of particles in the cell.
+   * @param numParticles Expected number of particles in the cell.
    */
-  Cell(uint64_t num_particles) {
-    particles.reserve(num_particles);
-    queue.reserve(num_particles);
+  Cell(uint64_t numParticles) {
+    particles.reserve(numParticles);
+    queue.reserve(numParticles);
   }
 
   /**

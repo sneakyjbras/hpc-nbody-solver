@@ -20,7 +20,7 @@ template <typename T> void FlatGrid2D<T>::fill(const T &value) {
 }
 
 template <typename T>
-void FlatGrid2D<T>::printGrid(
+void FlatGrid2D<T>::debugGrid(
     std::function<std::string(const T &)> formatter) const {
   std::cout << "\nFlatGrid2D Debug Print:\n";
   for (int32_t i = 0; i < totalRows; i++) {
