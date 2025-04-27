@@ -59,4 +59,11 @@
 ///        when streaming floating‑point values.
 #define DECIMAL_CASES 6
 
+// ---------------------------------------------------------------------------
+// Miscellaneous tags
+// ---------------------------------------------------------------------------
+/// @brief Compile‑time tag identifying the first partition of the simulation
+///        domain (useful in MPI/parallel contexts).
+#define TAG_PART0 1488
+
 #endif // MACROS_HPP

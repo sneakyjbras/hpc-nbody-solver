@@ -1,14 +1,14 @@
 #include "initParticles.hpp"
 
 namespace Simulation {
-unsigned int seed;
-void initR4Uni(int inputSeed) { seed = inputSeed + 987654321; }
+uint32_t seed;
+void initR4Uni(int32_t inputSeed) { seed = inputSeed + 987654321; }
 double rndUniform01() {
-  int seed_in = seed;
+  int32_t seedIn = seed;
   seed ^= (seed << 13);
   seed ^= (seed >> 17);
   seed ^= (seed << 5);
-  return 0.5 + 0.2328306e-09 * (seed_in + (int)seed);
+  return 0.5 + 0.2328306e-09 * (seedIn + (int32_t)seed);
 }
 double rndNormal01() {
   double u1, u2, z, result;

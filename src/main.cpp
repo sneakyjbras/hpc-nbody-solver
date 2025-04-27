@@ -4,11 +4,12 @@
 #include <cstdlib>
 #include <iomanip>
 #include <iostream>
-#include <omp.h>
 #include <queue>
-#include <unordered_map>
 #include <unordered_set>
 #include <vector>
+
+#include <mpi.h>
+#include <omp.h>
 
 #include "parsim.hpp"
 
@@ -19,12 +20,8 @@ int32_t main(int32_t argc, char *argv[]) {
     return 1;
   }
 
-  // Enable nested parallelism if required by simulation routines.
-  omp_set_nested(true);
-
-  std::unordered_set<Simulation::Particle *>
-      visited; // Set to track visited particles.
-  std::queue<Simulation::Particle *> bfsQueue; // Queue for BFS traversal.
+  // Initialize MPI communications.
+  MPI_Init(&argc, &argv);
 
   // Parse command-line arguments.
   const int32_t seed = static_cast<int32_t>(std::stol(argv[1], nullptr, 10));
@@ -35,36 +32,50 @@ int32_t main(int32_t argc, char *argv[]) {
       static_cast<uint64_t>(std::strtoll(argv[4], nullptr, 10));
   const int32_t tsteps =
       static_cast<int32_t>(std::strtol(argv[5], nullptr, 10));
-  const int32_t nThreads = static_cast<int32_t>(omp_get_max_threads());
 
-  Simulation::Parsim parsim(seed, side, ncside, nPart, tsteps);
+  // Create simulation instance with parsed parameters.
+  Simulation::Parsim parsim(seed, side, ncside, nPart, tsteps, MPI_COMM_WORLD);
+
+  if (parsim.getWorldSize() < ncside) {
+    // Only rank 0 prints the result.
+  } else {
+    std::cerr << "Total procs: " << parsim.getWorldSize()
+              << "; should be less than ncside: " << ncside << std::endl;
+    MPI_Abort(MPI_COMM_WORLD, 1);
+    return -1;
+  }
 
   // Start timing the simulation.
   double startTime = omp_get_wtime();
 
+  // Setup simulation.
+  parsim.getAllNeighbors();
+  parsim.allocateGrid();
+  parsim.populateGrid();
+  parsim.createMPIType();
+  parsim.initializeCommunication();
+
+  std::unordered_set<Particle *> visited; // Track visited particles.
+  std::queue<Particle *> bfsQueue;        // Queue for BFS traversal.
   uint64_t totalCollisions = 0;
-#pragma omp parallel private(visited, bfsQueue) num_threads(nThreads)          \
-    reduction(+ : totalCollisions)
-  {
-    // Compute this thread's linear cell range
-    int32_t tid = omp_get_thread_num();
-    int32_t totalCells = ncside * ncside;
-    int32_t cellsPerThread = (totalCells + nThreads - 1) / nThreads;
-    int32_t idxStart = tid * cellsPerThread;
-    int32_t idxEnd = std::min(totalCells, idxStart + cellsPerThread);
 
-    parsim.allocateGrid();
-    parsim.populateGrid();
+  totalCollisions += parsim.simulate(visited, bfsQueue);
 
-    // Run the simulation for this subrange of cells
-    totalCollisions += parsim.simulate(visited, bfsQueue, idxStart, idxEnd);
+  if (parsim.getWorldSize() < ncside) {
+    // Only rank 0 prints the result.
+    if (!parsim.getWorldRank()) {
+      std::cout << std::fixed << std::setprecision(3) << parsim.getParticle0().x
+                << " " << parsim.getParticle0().y << std::endl;
+      std::cout << totalCollisions << std::endl;
+      double execTime = omp_get_wtime() - startTime;
+      std::cerr << std::fixed << std::setprecision(1) << execTime << "s"
+                << std::endl;
+    }
+  } else {
+    std::cerr << "Total procs: " << parsim.getWorldSize()
+              << "; should be less than ncside: " << ncside << std::endl;
   }
 
-  double execTime = omp_get_wtime() - startTime;
-  std::cout << std::fixed << std::setprecision(3) << parsim.get_particle(0).x
-            << " " << parsim.get_particle(0).y << std::endl;
-  std::cout << totalCollisions << std::endl;
-  std::cerr << std::fixed << std::setprecision(1) << execTime << "s"
-            << std::endl;
+  MPI_Finalize();
   return 0;
 }

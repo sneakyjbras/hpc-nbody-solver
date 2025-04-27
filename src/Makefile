@@ -1,5 +1,5 @@
 # Compiler
-CXX = g++
+CXX = mpic++
 
 # Compiler flags
 CXXFLAGS = -Wall -Wextra -O2 -std=c++20 -fopenmp
@@ -10,10 +10,10 @@ ifeq ($(DEBUG),1)
 endif
 
 # Source files
-CPP_SRCS = main.cpp parsim.cpp initParticles.cpp parsimUtils.cpp
+CPP_SRCS = main.cpp parsim.cpp parsim_utils.cpp
 
 # Header files
-HEADERS = ds.hpp initParticles.hpp parsim.hpp parsimUtils.hpp pointCalculations.hpp
+HEADERS = ds.hpp parsim.hpp parsim_utils.hpp pointCalculations.hpp flatGrid2D.hpp
 
 # Object files
 CPP_OBJS = $(CPP_SRCS:.cpp=.o)

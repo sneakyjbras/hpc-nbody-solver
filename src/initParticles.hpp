@@ -12,7 +12,7 @@ namespace Simulation {
  *
  * @param inputSeed The input seed value.
  */
-void initR4Uni(int inputSeed);
+void initR4Uni(int32_t inputSeed);
 
 /**
  * @brief Generates a uniformly distributed random number in the range [0,1).
