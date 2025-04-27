@@ -87,7 +87,6 @@ The **mpi** branch distributes the simulation over multiple nodes using MPI.
 The **mpi‑omp** branch combines MPI between nodes with OpenMP threading inside each rank.
 
 - **Hybrid parallel regions**: Each rank launches an OpenMP team; MPI calls are confined to the master thread.
-- **NUMA‑aware affinity** via `OMP_PLACES` and `OMP_PROC_BIND`.
 - **Cluster job script**: A ready‑to‑use SLURM submission helper, `run_slurm.sh`, lives at the project root. Tweak the `#SBATCH` resource lines to match your cluster (nodes, tasks‑per‑node, OMP threads) and submit with `sbatch run_slurm.sh`.
 - **Performance**:
   - **Super‑linear** for uniform distributions (e.g. **128×** on **32 MPI ranks × 8 threads** thanks to improved cache locality).
