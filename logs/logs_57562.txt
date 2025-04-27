@@ -1,0 +1,3858 @@
+Using OMP_THREADS=4
+======================================
+Running with 64 MPI process(es) across 64 node(s)
+OpenMP threads per process: 4
+======================================
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim 1 5000 100 1000000 4
+3936.506 131.472
+4
+0.2s
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim 1 5000 100 1000000 100
+3899.787 156.291
+163
+3.4s
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim 1 5000 20 1000000 10
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+3918.912 143.364
+19
+1.6s
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim 1 1000 3 10000 10000
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab3p5:2819079:0:2819079] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p10:4161616:0:4161616] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab2p18:187768:0:187768] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p20:755750:0:755750] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p2:1270676:0:1270676] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p4:77573:0:77573] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p6:89413:0:89413] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p4:127727:0:127727] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p9:153844:0:153844] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p17:1789581:0:1789581] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p19:125928:0:125928] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p3:2663888:0:2663888] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p5:3637508:0:3637508] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p7:2422044:0:2422044] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p9:702361:0:702361] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab4p5:332475:0:332475] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p8:2273504:0:2273504] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p1:88962:0:88962] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab3p10:2878504:0:2878504] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab4p7:191810:0:191810] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab2p3:120134:0:120134] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p8:59384:0:59384] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p6:830669:0:830669] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p12:815308:0:815308] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p14:974653:0:974653] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p16:346010:0:346010] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p6:72450:0:72450] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p7:358525:0:358525] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p13:961086:0:961086] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p11:912895:0:912895] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p15:936868:0:936868] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p7:3494099:0:3494099] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p8:241138:0:241138] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p6:4074336:0:4074336] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p8:2018949:0:2018949] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p6:304284:0:304284] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab6p9:283519:0:283519] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab4p2:220003:0:220003] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p6:13780:0:13780] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p1:58924:0:58924] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p9:150193:0:150193] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p3:2651656:0:2651656] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p8:298695:0:298695] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p5:2742873:0:2742873] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p1:192970:0:192970] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p4:1369219:0:1369219] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p4:61963:0:61963] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p5:306969:0:306969] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p3:79247:0:79247] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p7:1604301:0:1604301] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p4:39644:0:39644] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p7:2570684:0:2570684] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p4:129650:0:129650] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p8:2133993:0:2133993] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p3:3329396:0:3329396] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid:2742873) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 192970) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1369219) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2651656) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2819079) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  89413) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1270676) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2422044) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2273504) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  77573) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2663888) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  88962) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2878504) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 702361) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1789581) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 187768) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 153844) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:4161616) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 961086) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+==== backtrace (tid: 127727) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 125928) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 830669) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid: 755750) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 191810) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+=================================
+==== backtrace (tid: 120134) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 912895) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 815308) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+=================================
+==== backtrace (tid: 936868) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  59384) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 346010) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 358525) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 974653) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 150193) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  13780) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  58924) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 220003) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  61963) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  79247) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 304284) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 298695) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 283519) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  72450) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:4074336) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 241138) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1604301) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3494099) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 306969) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3637508) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2018949) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2133993) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  39644) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2570684) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 129650) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3329396) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 332475) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+srun: error: lab3p2: task 37: Floating point exception (core dumped)
+srun: error: lab5p1: task 55: Floating point exception (core dumped)
+srun: error: lab5p4: task 57: Floating point exception (core dumped)
+srun: error: lab3p4: task 39: Floating point exception (core dumped)
+srun: error: lab3p8: task 43: Floating point exception (core dumped)
+srun: error: lab3p7: task 42: Floating point exception (core dumped)
+srun: error: lab3p1: task 36: Floating point exception (core dumped)
+srun: error: lab3p6: task 41: Floating point exception (core dumped)
+srun: error: lab3p10: task 45: Floating point exception (core dumped)
+srun: error: lab3p3: task 38: Floating point exception (core dumped)
+srun: error: lab4p3: task 48: Floating point exception (core dumped)
+slurmstepd: error: *** STEP 57562.3 ON lab0p1 CANCELLED AT 2025-04-04T18:55:18 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab3p9: task 44: Floating point exception (core dumped)
+srun: error: lab1p2: task 10: Exited with exit code 14
+srun: error: lab4p2: task 47: Floating point exception (core dumped)
+srun: error: lab3p5: task 40: Floating point exception (core dumped)
+srun: error: lab4p6: task 51: Floating point exception (core dumped)
+srun: error: lab4p1: task 46: Floating point exception (core dumped)
+srun: error: lab1p1: task 9: Killed
+srun: error: lab0p1: task 0: Killed
+srun: error: lab6p5: task 59: Floating point exception (core dumped)
+srun: error: lab4p7: task 52: Floating point exception (core dumped)
+srun: error: lab0p2: task 1: Killed
+srun: error: lab0p3: task 2: Killed
+srun: error: lab6p9: task 63: Floating point exception (core dumped)
+srun: error: lab6p8: task 62: Floating point exception (core dumped)
+srun: error: lab1p10: task 17: Killed
+srun: error: lab1p9: task 16: Killed
+srun: error: lab0p6: task 5: Floating point exception (core dumped)
+srun: error: lab6p6: task 60: Floating point exception (core dumped)
+srun: error: lab4p4: task 49: Floating point exception (core dumped)
+srun: error: lab0p9: task 8: Killed
+srun: error: lab1p6: task 13: Floating point exception (core dumped)
+srun: error: lab2p2: task 18: Killed
+srun: error: lab2p10: task 25: Floating point exception (core dumped)
+srun: error: lab5p3: task 56: Floating point exception (core dumped)
+srun: error: lab0p4: task 3: Floating point exception (core dumped)
+srun: error: lab4p9: task 54: Floating point exception (core dumped)
+srun: error: lab2p6: task 21: Floating point exception (core dumped)
+srun: error: lab1p4: task 12: Floating point exception (core dumped)
+srun: error: lab6p7: task 61: Floating point exception (core dumped)
+srun: error: lab0p7: task 6: Floating point exception (core dumped)
+srun: error: lab1p3: task 11: Floating point exception (core dumped)
+srun: error: lab0p5: task 4: Floating point exception (core dumped)
+srun: error: lab2p12: task 27: Floating point exception (core dumped)
+srun: error: lab1p7: task 14: Floating point exception (core dumped)
+srun: error: lab2p14: task 29: Floating point exception (core dumped)
+srun: error: lab2p7: task 22: Floating point exception (core dumped)
+srun: error: lab2p18: task 33: Floating point exception (core dumped)
+srun: error: lab2p11: task 26: Floating point exception (core dumped)
+srun: error: lab1p8: task 15: Floating point exception (core dumped)
+srun: error: lab2p4: task 20: Floating point exception (core dumped)
+srun: error: lab2p3: task 19: Floating point exception (core dumped)
+srun: error: lab2p9: task 24: Floating point exception (core dumped)
+srun: error: lab2p20: task 35: Floating point exception (core dumped)
+srun: error: lab2p15: task 30: Floating point exception (core dumped)
+srun: error: lab2p8: task 23: Floating point exception (core dumped)
+srun: error: lab2p13: task 28: Floating point exception (core dumped)
+srun: error: lab2p16: task 31: Floating point exception (core dumped)
+srun: error: lab2p19: task 34: Floating point exception (core dumped)
+srun: error: lab4p8: task 53: Floating point exception (core dumped)
+srun: error: lab2p17: task 32: Floating point exception (core dumped)
+srun: error: lab0p8: task 7: Floating point exception (core dumped)
+srun: error: lab5p5: task 58: Floating point exception (core dumped)
+srun: error: lab4p5: task 50: Floating point exception (core dumped)
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim 3 5000 50 1000000 300
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+3819.032 25.659
+469
+13.3s
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim 3 5000 50 1000000 500
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+Total procs: 64; should be less than ncside: 50
+3738.436 58.743
+804
+23.5s
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim -1 1000 30 100000 1000
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+Total procs: 64; should be less than ncside: 30
+575.878 370.663
+1203
+43.5s
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim 12672 0.05 3 10 10
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p17:1789707:0:1789707] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p4:127853:0:127853] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p19:126110:0:126110] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p3:2664007:0:2664007] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab3p5:2819202:0:2819202] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p7:358649:0:358649] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p9:153971:0:153971] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p11:913078:0:913078] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p1:89080:0:89080] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p18:187893:0:187893] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab0p7:2570808:0:2570808] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p7:2422258:0:2422258] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p3:120260:0:120260] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p15:936996:0:936996] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p13:961210:0:961210] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p10:4161744:0:4161744] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab2p20:755875:0:755875] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p9:702483:0:702483] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p1:59045:0:59045] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p4:62086:0:62086] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p9:150316:0:150316] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p6:830795:0:830795] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p12:815436:0:815436] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p8:2273623:0:2273623] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab3p6:89533:0:89533] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p8:59509:0:59509] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p14:974780:0:974780] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab0p4:39770:0:39770] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p10:2878623:0:2878623] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p3:2651779:0:2651779] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p5:3637633:0:3637633] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p16:346136:0:346136] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p4:77691:0:77691] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p6:304405:0:304405] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p3:79365:0:79365] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p8:2134118:0:2134118] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p6:72575:0:72575] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p6:4074461:0:4074461] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p5:2743007:0:2743016] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p7:3494225:0:3494225] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab6p5:307123:0:307123] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p9:283639:0:283639] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p8:298816:0:298816] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p2:220125:0:220125] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p6:13901:0:13901] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p7:1604423:0:1604423] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab5p1:193091:0:193091] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p8:241268:0:241268] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p4:1369338:0:1369338] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p7:191932:0:191932] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p4:129775:0:129775] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab1p3:3329522:0:3329531] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p5:332657:0:332666] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid:2651779) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+[lab1p8:2019077:0:2019077] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid: 193091) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1369338) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+[lab3p2:1270805:0:1270805] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid:2819202) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2273623) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2422258) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2878623) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  89080) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 702483) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2664007) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  89533) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  77691) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2743016) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x000000000002074e gomp_thread_start()  ???:0
+ 4 0x0000000000090d02 start_thread()  ???:0
+ 5 0x00000000001103ac __clone3()  ???:0
+=================================
+==== backtrace (tid:1789707) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 127853) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 187893) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 755875) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 120260) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 913078) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 830795) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 153971) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 961210) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid: 126110) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid:4161744) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  62086) ====
+==== backtrace (tid: 358649) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 936996) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+=================================
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid:  59509) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+==== backtrace (tid: 815436) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 974780) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid:  59045) ====
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 4 0x0000000000403be2 main()  ???:0
+==== backtrace (tid: 346136) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 150316) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2134118) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 304405) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1604423) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 283639) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2570808) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 220125) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  79365) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 307123) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  39770) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  13901) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  72575) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:4074461) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 191932) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 298816) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3637633) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 241268) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3494225) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 129775) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3329531) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x000000000002074e gomp_thread_start()  ???:0
+ 4 0x0000000000090d02 start_thread()  ???:0
+ 5 0x00000000001103ac __clone3()  ???:0
+=================================
+==== backtrace (tid:2019077) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1270805) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 332666) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x000000000002074e gomp_thread_start()  ???:0
+ 4 0x0000000000090d02 start_thread()  ???:0
+ 5 0x00000000001103ac __clone3()  ???:0
+=================================
+srun: error: lab5p1: task 55: Floating point exception (core dumped)
+srun: error: lab3p4: task 39: Floating point exception (core dumped)
+srun: error: lab5p3: task 56: Floating point exception (core dumped)
+srun: error: lab3p10: task 45: Floating point exception (core dumped)
+srun: error: lab3p5: task 40: Floating point exception (core dumped)
+srun: error: lab3p8: task 43: Floating point exception (core dumped)
+srun: error: lab3p6: task 41: Floating point exception (core dumped)
+srun: error: lab3p1: task 36: Floating point exception (core dumped)
+srun: error: lab3p3: task 38: Floating point exception (core dumped)
+srun: error: lab3p7: task 42: Floating point exception (core dumped)
+srun: error: lab4p8: task 53: Floating point exception (core dumped)
+srun: error: lab4p2: task 47: Floating point exception (core dumped)
+slurmstepd: error: *** STEP 57562.7 ON lab0p1 CANCELLED AT 2025-04-04T18:56:45 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab4p7: task 52: Floating point exception (core dumped)
+srun: error: lab5p4: task 57: Floating point exception (core dumped)
+srun: error: lab0p9: task 8: Exited with exit code 14
+srun: error: lab3p2: task 37: Floating point exception (core dumped)
+srun: error: lab4p1: task 46: Floating point exception (core dumped)
+srun: error: lab1p10: task 17: Killed
+srun: error: lab6p8: task 62: Floating point exception (core dumped)
+srun: error: lab1p1: task 9: Exited with exit code 14
+srun: error: lab4p3: task 48: Floating point exception (core dumped)
+srun: error: lab4p6: task 51: Floating point exception (core dumped)
+srun: error: lab1p2: task 10: Killed
+srun: error: lab6p5: task 59: Floating point exception (core dumped)
+srun: error: lab2p2: task 18: Killed
+srun: error: lab0p2: task 1: Killed
+srun: error: lab0p1: task 0: Killed
+srun: error: lab6p9: task 63: Floating point exception (core dumped)
+srun: error: lab4p9: task 54: Floating point exception (core dumped)
+srun: error: lab1p3: task 11: Killed
+srun: error: lab1p9: task 16: Killed
+srun: error: lab4p4: task 49: Floating point exception (core dumped)
+srun: error: lab0p3: task 2: Killed
+srun: error: lab0p4: task 3: Floating point exception (core dumped)
+srun: error: lab6p6: task 60: Floating point exception (core dumped)
+srun: error: lab0p7: task 6: Floating point exception (core dumped)
+srun: error: lab2p10: task 25: Floating point exception (core dumped)
+srun: error: lab0p5: task 4: Floating point exception (core dumped)
+srun: error: lab0p6: task 5: Floating point exception (core dumped)
+srun: error: lab1p4: task 12: Floating point exception (core dumped)
+srun: error: lab1p6: task 13: Floating point exception (core dumped)
+srun: error: lab1p7: task 14: Floating point exception (core dumped)
+srun: error: lab2p6: task 21: Floating point exception (core dumped)
+srun: error: lab2p4: task 20: Floating point exception (core dumped)
+srun: error: lab6p7: task 61: Floating point exception (core dumped)
+srun: error: lab2p11: task 26: Floating point exception (core dumped)
+srun: error: lab4p5: task 50: Killed
+srun: error: lab2p8: task 23: Floating point exception (core dumped)
+srun: error: lab2p9: task 24: Floating point exception (core dumped)
+srun: error: lab2p3: task 19: Floating point exception (core dumped)
+srun: error: lab2p17: task 32: Floating point exception (core dumped)
+srun: error: lab2p18: task 33: Floating point exception (core dumped)
+srun: error: lab5p5: task 58: Killed
+srun: error: lab2p12: task 27: Floating point exception (core dumped)
+srun: error: lab1p8: task 15: Floating point exception (core dumped)
+srun: error: lab2p7: task 22: Floating point exception (core dumped)
+srun: error: lab2p19: task 34: Floating point exception (core dumped)
+srun: error: lab2p15: task 30: Floating point exception (core dumped)
+srun: error: lab2p20: task 35: Floating point exception (core dumped)
+srun: error: lab2p13: task 28: Floating point exception (core dumped)
+srun: error: lab2p14: task 29: Floating point exception (core dumped)
+srun: error: lab2p16: task 31: Floating point exception (core dumped)
+srun: error: lab0p8: task 7: Floating point exception (core dumped)
+srun: error: lab3p9: task 44: Floating point exception (core dumped)
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim 5893 0.05 3 10 10
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p17:1789759:0:1789759] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p18:187944:0:187944] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p4:127904:0:127904] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab2p9:154022:0:154022] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p19:126177:0:126177] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab3p1:89128:0:89128] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p4:39821:0:39821] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab3p5:2819252:0:2819252] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p12:815487:0:815487] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p3:120310:0:120310] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p6:830847:0:830847] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p10:4161794:0:4161794] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p20:755930:0:755930] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p11:913147:0:913147] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p13:961263:0:961263] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p8:59561:0:59561] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p14:974834:0:974834] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p8:2019130:0:2019130] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p16:346189:0:346189] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p8:241325:0:241325] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p7:358702:0:358702] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p15:937049:0:937049] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p9:150365:0:150365] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p3:2664055:0:2664055] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p7:2570859:0:2570859] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p10:2878672:0:2878672] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p8:2273673:0:2273673] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p7:2422328:0:2422328] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p5:3637686:0:3637686] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab3p9:702538:0:702538] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab4p2:220174:0:220174] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p4:77739:0:77739] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p6:13950:0:13950] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab1p4:129827:0:129827] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p7:3494278:0:3494278] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab6p8:298865:0:298865] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p3:2651828:0:2651828] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p6:4074514:0:4074514] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p4:62135:0:62135] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab4p8:2134166:0:2134166] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab6p9:283687:0:283687] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p5:2743061:0:2743061] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p4:1369387:0:1369387] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p5:307182:0:307182] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p1:193139:0:193147] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p1:59095:0:59095] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p6:304454:0:304454] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p7:1604472:0:1604472] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p3:79415:0:79415] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p6:89581:0:89581] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p6:72627:0:72627] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p7:191980:0:191980] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p5:332721:0:332721] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid:2651828) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1369387) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2743061) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+[lab3p2:1270855:0:1270855] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p3:3329571:0:3329571] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid: 193147) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x000000000002074e gomp_thread_start()  ???:0
+ 4 0x0000000000090d02 start_thread()  ???:0
+ 5 0x00000000001103ac __clone3()  ???:0
+=================================
+==== backtrace (tid:2819252) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  89128) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2273673) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2878672) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  77739) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2422328) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 702538) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2664055) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  89581) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 815487) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid: 120310) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+==== backtrace (tid:  59561) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 830847) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid:4161794) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid: 187944) ====
+==== backtrace (tid: 974834) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 346189) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 755930) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 127904) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid: 358702) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 154022) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+==== backtrace (tid: 913147) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 961263) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid: 937049) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid:1789759) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 126177) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 150365) ====
+==== backtrace (tid: 298865) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 220174) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+==== backtrace (tid:  13950) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+=================================
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2019130) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+=================================
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+=================================
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 283687) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  62135) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 307182) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2570859) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3637686) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  39821) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  59095) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2134166) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 241325) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 191980) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  79415) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:4074514) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 304454) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  72627) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 129827) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3494278) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1604472) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 332721) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid:3329571) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1270855) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+srun: error: lab5p5: task 58: Floating point exception (core dumped)
+srun: error: lab5p1: task 55: Floating point exception (core dumped)
+srun: error: lab5p3: task 56: Floating point exception (core dumped)
+srun: error: lab3p4: task 39: Floating point exception (core dumped)
+srun: error: lab3p1: task 36: Floating point exception (core dumped)
+srun: error: lab3p7: task 42: Floating point exception (core dumped)
+srun: error: lab3p6: task 41: Floating point exception (core dumped)
+srun: error: lab3p8: task 43: Floating point exception (core dumped)
+srun: error: lab5p4: task 57: Floating point exception (core dumped)
+srun: error: lab3p10: task 45: Floating point exception (core dumped)
+srun: error: lab3p5: task 40: Floating point exception (core dumped)
+srun: error: lab1p2: task 10: Exited with exit code 14
+slurmstepd: error: *** STEP 57562.8 ON lab0p1 CANCELLED AT 2025-04-04T18:56:47 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab4p4: task 49: Floating point exception (core dumped)
+srun: error: lab4p1: task 46: Floating point exception (core dumped)
+srun: error: lab4p8: task 53: Floating point exception (core dumped)
+srun: error: lab6p8: task 62: Floating point exception (core dumped)
+srun: error: lab4p2: task 47: Floating point exception (core dumped)
+srun: error: lab0p1: task 0: Killed
+srun: error: lab6p9: task 63: Floating point exception (core dumped)
+srun: error: lab4p7: task 52: Floating point exception (core dumped)
+srun: error: lab0p2: task 1: Killed
+srun: error: lab0p3: task 2: Killed
+srun: error: lab1p1: task 9: Killed
+srun: error: lab0p9: task 8: Killed
+srun: error: lab4p6: task 51: Floating point exception (core dumped)
+srun: error: lab4p3: task 48: Floating point exception (core dumped)
+srun: error: lab1p10: task 17: Killed
+srun: error: lab3p3: task 38: Floating point exception (core dumped)
+srun: error: lab3p2: task 37: Floating point exception (core dumped)
+srun: error: lab1p9: task 16: Killed
+srun: error: lab0p4: task 3: Floating point exception (core dumped)
+srun: error: lab2p2: task 18: Killed
+srun: error: lab2p10: task 25: Floating point exception (core dumped)
+srun: error: lab0p7: task 6: Floating point exception (core dumped)
+srun: error: lab1p6: task 13: Floating point exception (core dumped)
+srun: error: lab6p6: task 60: Floating point exception (core dumped)
+srun: error: lab0p8: task 7: Floating point exception (core dumped)
+srun: error: lab0p5: task 4: Floating point exception (core dumped)
+srun: error: lab2p18: task 33: Floating point exception (core dumped)
+srun: error: lab1p4: task 12: Floating point exception (core dumped)
+srun: error: lab6p7: task 61: Floating point exception (core dumped)
+srun: error: lab1p7: task 14: Floating point exception (core dumped)
+srun: error: lab1p3: task 11: Floating point exception (core dumped)
+srun: error: lab3p9: task 44: Floating point exception (core dumped)
+srun: error: lab1p8: task 15: Floating point exception (core dumped)
+srun: error: lab4p9: task 54: Floating point exception (core dumped)
+srun: error: lab2p6: task 21: Floating point exception (core dumped)
+srun: error: lab2p15: task 30: Floating point exception (core dumped)
+srun: error: lab0p6: task 5: Floating point exception (core dumped)
+srun: error: lab2p4: task 20: Floating point exception (core dumped)
+srun: error: lab2p8: task 23: Floating point exception (core dumped)
+srun: error: lab2p19: task 34: Floating point exception (core dumped)
+srun: error: lab2p14: task 29: Floating point exception (core dumped)
+srun: error: lab2p17: task 32: Floating point exception (core dumped)
+srun: error: lab2p12: task 27: Floating point exception (core dumped)
+srun: error: lab2p9: task 24: Floating point exception (core dumped)
+srun: error: lab2p16: task 31: Floating point exception (core dumped)
+srun: error: lab2p11: task 26: Floating point exception (core dumped)
+srun: error: lab2p20: task 35: Floating point exception (core dumped)
+srun: error: lab2p13: task 28: Floating point exception (core dumped)
+srun: error: lab2p3: task 19: Floating point exception (core dumped)
+srun: error: lab2p7: task 22: Floating point exception (core dumped)
+srun: error: lab6p5: task 59: Floating point exception (core dumped)
+srun: error: lab4p5: task 50: Floating point exception (core dumped)
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim 8555 0.05 3 10 10
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p18:187997:0:187997] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p4:127958:0:127958] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab2p17:1789813:0:1789813] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p19:126244:0:126244] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab3p5:2819302:0:2819302] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab0p4:39874:0:39874] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p3:120365:0:120365] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab2p20:755982:0:755982] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p10:4161848:0:4161848] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab2p13:961316:0:961316] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p11:913216:0:913216] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p7:358758:0:358758] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p9:154075:0:154075] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p6:89628:0:89628] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p6:830900:0:830900] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p8:59616:0:59616] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p12:815539:0:815539] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p14:974887:0:974887] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p4:77786:0:77786] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p15:937102:0:937102] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p7:2570913:0:2570913] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab3p7:2422393:0:2422393] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab1p4:129882:0:129882] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p1:89176:0:89176] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p8:2273721:0:2273721] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p10:2878720:0:2878720] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab4p4:62186:0:62186] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p9:702589:0:702589] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p5:3637741:0:3637741] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab2p16:346242:0:346242] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p8:241381:0:241381] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p6:72682:0:72682] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p2:220225:0:220225] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p8:2019186:0:2019186] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p8:298916:0:298916] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p7:192031:0:192031] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p7:3494334:0:3494334] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+Total procs: 64; should be less than ncside: 3
+[lab6p7:1604523:0:1604523] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p6:14001:0:14001] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p5:2743116:0:2743116] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p3:79466:0:79466] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p3:2651875:0:2651875] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p1:59146:0:59146] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p9:150416:0:150416] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p6:304505:0:304505] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p5:307241:0:307241] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p9:283738:0:283738] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 3
+[lab5p4:1369435:0:1369444] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p1:193187:0:193187] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p6:4074569:0:4074569] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p3:2664106:0:2664106] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p5:332787:0:332787] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p8:2134217:0:2134217] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p3:3329625:0:3329625] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid:2651875) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2743116) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 193187) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+[lab3p2:1270906:0:1270906] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid: 702589) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2878720) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2273721) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  89628) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  89176) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  77786) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2819302) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2422393) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 120365) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+==== backtrace (tid: 154075) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+=================================
+==== backtrace (tid: 127958) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid:1789813) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 126244) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid:4161848) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid: 187997) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 358758) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  59616) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+==== backtrace (tid: 830900) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+=================================
+==== backtrace (tid: 961316) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 913216) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+==== backtrace (tid: 815539) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 974887) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid: 755982) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 937102) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 346242) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid:  62186) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1369444) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x000000000002074e gomp_thread_start()  ???:0
+ 4 0x0000000000090d02 start_thread()  ???:0
+ 5 0x00000000001103ac __clone3()  ???:0
+=================================
+==== backtrace (tid:  14001) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1604523) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 307241) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 241381) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 283738) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2019186) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:4074569) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 129882) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3637741) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  39874) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 220225) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 192031) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 150416) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  79466) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 298916) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2134217) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  72682) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2570913) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 304505) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  59146) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3494334) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2664106) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 332787) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3329625) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1270906) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+srun: error: lab5p3: task 56: Floating point exception (core dumped)
+srun: error: lab5p5: task 58: Floating point exception (core dumped)
+srun: error: lab5p1: task 55: Floating point exception (core dumped)
+srun: error: lab3p4: task 39: Floating point exception (core dumped)
+srun: error: lab3p1: task 36: Floating point exception (core dumped)
+srun: error: lab3p8: task 43: Floating point exception (core dumped)
+srun: error: lab5p4: task 57: Floating point exception (core dumped)
+srun: error: lab3p6: task 41: Floating point exception (core dumped)
+srun: error: lab3p7: task 42: Floating point exception (core dumped)
+srun: error: lab3p10: task 45: Floating point exception (core dumped)
+srun: error: lab3p5: task 40: Floating point exception (core dumped)
+srun: error: lab1p1: task 9: Exited with exit code 14
+slurmstepd: error: *** STEP 57562.9 ON lab0p1 CANCELLED AT 2025-04-04T18:56:49 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab4p3: task 48: Floating point exception (core dumped)
+srun: error: lab4p4: task 49: Floating point exception (core dumped)
+srun: error: lab0p1: task 0: Killed
+srun: error: lab4p6: task 51: Floating point exception (core dumped)
+srun: error: lab4p9: task 54: Floating point exception (core dumped)
+srun: error: lab4p8: task 53: Floating point exception (core dumped)
+srun: error: lab3p3: task 38: Floating point exception (core dumped)
+srun: error: lab4p2: task 47: Floating point exception (core dumped)
+srun: error: lab4p7: task 52: Floating point exception (core dumped)
+srun: error: lab6p5: task 59: Floating point exception (core dumped)
+srun: error: lab6p8: task 62: Floating point exception (core dumped)
+srun: error: lab6p9: task 63: Floating point exception (core dumped)
+srun: error: lab1p2: task 10: Killed
+srun: error: lab0p2: task 1: Killed
+srun: error: lab0p9: task 8: Killed
+srun: error: lab0p6: task 5: Floating point exception (core dumped)
+srun: error: lab2p2: task 18: Killed
+srun: error: lab1p10: task 17: Killed
+srun: error: lab6p6: task 60: Floating point exception (core dumped)
+srun: error: lab3p2: task 37: Floating point exception (core dumped)
+srun: error: lab1p9: task 16: Killed
+srun: error: lab2p10: task 25: Floating point exception (core dumped)
+srun: error: lab0p5: task 4: Floating point exception (core dumped)
+srun: error: lab2p14: task 29: Floating point exception (core dumped)
+srun: error: lab1p4: task 12: Floating point exception (core dumped)
+srun: error: lab2p18: task 33: Floating point exception (core dumped)
+srun: error: lab0p3: task 2: Killed
+srun: error: lab2p12: task 27: Floating point exception (core dumped)
+srun: error: lab0p7: task 6: Floating point exception (core dumped)
+srun: error: lab0p8: task 7: Floating point exception (core dumped)
+srun: error: lab4p1: task 46: Floating point exception (core dumped)
+srun: error: lab6p7: task 61: Floating point exception (core dumped)
+srun: error: lab3p9: task 44: Floating point exception (core dumped)
+srun: error: lab1p6: task 13: Floating point exception (core dumped)
+srun: error: lab2p11: task 26: Floating point exception (core dumped)
+srun: error: lab1p8: task 15: Floating point exception (core dumped)
+srun: error: lab2p4: task 20: Floating point exception (core dumped)
+srun: error: lab2p3: task 19: Floating point exception (core dumped)
+srun: error: lab2p15: task 30: Floating point exception (core dumped)
+srun: error: lab2p6: task 21: Floating point exception (core dumped)
+srun: error: lab2p9: task 24: Floating point exception (core dumped)
+srun: error: lab1p3: task 11: Floating point exception (core dumped)
+srun: error: lab2p19: task 34: Floating point exception (core dumped)
+srun: error: lab1p7: task 14: Floating point exception (core dumped)
+srun: error: lab2p7: task 22: Floating point exception (core dumped)
+srun: error: lab2p17: task 32: Floating point exception (core dumped)
+srun: error: lab2p16: task 31: Floating point exception (core dumped)
+srun: error: lab2p8: task 23: Floating point exception (core dumped)
+srun: error: lab0p4: task 3: Floating point exception (core dumped)
+srun: error: lab2p13: task 28: Floating point exception (core dumped)
+srun: error: lab2p20: task 35: Floating point exception (core dumped)
+srun: error: lab4p5: task 50: Floating point exception (core dumped)
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim 12 100 5 10000 10000
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+[lab3p9:702637:0:702637] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p7:2422457:0:2422457] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p5:332853:0:332853] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+Total procs: 64; should be less than ncside: 5
+[lab4p3:79514:0:79514] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p6:89676:0:89676] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p8:2273768:0:2273768] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p10:2878767:0:2878767] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p3:2651925:0:2651925] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p5:2743168:0:2743168] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p1:59195:0:59195] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p4:77835:0:77835] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p9:150465:0:150465] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p4:1369483:0:1369492] Caught signal 8 (Floating point exception: integer divide by zero)
+Total procs: 64; should be less than ncside: 5
+[lab6p8:298964:0:298964] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p6:830949:0:830949] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p8:59665:0:59665] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p7:358808:0:358808] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p15:937154:0:937154] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p8:241432:0:241432] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p9:283786:0:283786] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p14:974936:0:974936] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab2p16:346292:0:346292] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p5:2819350:0:2819350] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p8:2134265:0:2134265] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p2:220273:0:220273] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab5p1:193234:0:193243] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p6:14049:0:14049] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p7:192079:0:192079] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab4p4:62234:0:62234] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p8:2019236:0:2019236] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p6:304554:0:304554] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p5:307297:0:307297] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab6p7:1604572:0:1604572] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p7:2570963:0:2570963] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p7:3494386:0:3494386] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab1p6:4074619:0:4074619] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab0p6:72732:0:72732] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p2:1270955:0:1270955] Caught signal 8 (Floating point exception: integer divide by zero)
+[lab3p3:2664154:0:2664154] Caught signal 8 (Floating point exception: integer divide by zero)
+==== backtrace (tid:2651925) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2743168) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2422457) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2273768) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  89676) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  77835) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2878767) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 702637) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1369492) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x000000000002074e gomp_thread_start()  ???:0
+ 4 0x0000000000090d02 start_thread()  ???:0
+ 5 0x00000000001103ac __clone3()  ???:0
+=================================
+==== backtrace (tid: 193243) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x000000000002074e gomp_thread_start()  ???:0
+ 4 0x0000000000090d02 start_thread()  ???:0
+ 5 0x00000000001103ac __clone3()  ???:0
+=================================
+==== backtrace (tid: 937154) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid:  59665) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+==== backtrace (tid: 974936) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+==== backtrace (tid: 358808) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 830949) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+==== backtrace (tid: 346292) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+=================================
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+=================================
+==== backtrace (tid:  79514) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 150465) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2819350) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  59195) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 298964) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 283786) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 241432) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  14049) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 220273) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  72732) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:  62234) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2134265) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 192079) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2019236) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1604572) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 307297) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 304554) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:4074619) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:3494386) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2570963) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:2664154) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid: 332853) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+==== backtrace (tid:1270955) ====
+ 0 0x0000000000040620 __GI___sigaction()  ???:0
+ 1 0x0000000000409fc6 Simulation::Parsim::allocateGrid()  ???:0
+ 2 0x0000000000404051 main._omp_fn.0()  main.cpp:0
+ 3 0x0000000000016e86 GOMP_parallel()  ???:0
+ 4 0x0000000000403be2 main()  ???:0
+ 5 0x000000000002a27e __libc_start_call_main()  ???:0
+ 6 0x000000000002a339 __libc_start_main_alias_2()  ???:0
+ 7 0x0000000000403e85 _start()  ???:0
+=================================
+srun: error: lab5p5: task 58: Floating point exception (core dumped)
+srun: error: lab5p3: task 56: Floating point exception (core dumped)
+slurmstepd: error: *** STEP 57562.10 ON lab0p1 CANCELLED AT 2025-04-04T18:56:51 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p11: task 26: Exited with exit code 14
+srun: error: lab3p4: task 39: Floating point exception (core dumped)
+srun: error: lab3p7: task 42: Floating point exception (core dumped)
+srun: error: lab3p6: task 41: Floating point exception (core dumped)
+srun: error: lab0p9: task 8: Killed
+srun: error: lab0p2: task 1: Killed
+srun: error: lab0p5: task 4: Killed
+srun: error: lab1p3: task 11: Killed
+srun: error: lab2p9: task 24: Exited with exit code 14
+srun: error: lab2p3: task 19: Killed
+srun: error: lab1p2: task 10: Killed
+srun: error: lab2p12: task 27: Killed
+srun: error: lab2p4: task 20: Killed
+srun: error: lab1p1: task 9: Killed
+srun: error: lab2p13: task 28: Killed
+srun: error: lab2p18: task 33: Killed
+srun: error: lab2p2: task 18: Killed
+srun: error: lab0p4: task 3: Killed
+srun: error: lab2p19: task 34: Killed
+srun: error: lab5p1: task 55: Floating point exception (core dumped)
+srun: error: lab0p1: task 0: Killed
+srun: error: lab2p20: task 35: Killed
+srun: error: lab3p1: task 36: Killed
+srun: error: lab2p10: task 25: Killed
+srun: error: lab1p4: task 12: Killed
+srun: error: lab1p10: task 17: Killed
+srun: error: lab2p17: task 32: Killed
+srun: error: lab5p4: task 57: Killed
+srun: error: lab0p3: task 2: Killed
+srun: error: lab1p9: task 16: Killed
+srun: error: lab3p10: task 45: Floating point exception (core dumped)
+srun: error: lab3p8: task 43: Floating point exception (core dumped)
+srun: error: lab4p4: task 49: Floating point exception (core dumped)
+srun: error: lab4p3: task 48: Floating point exception (core dumped)
+srun: error: lab6p8: task 62: Floating point exception (core dumped)
+srun: error: lab3p2: task 37: Floating point exception (core dumped)
+srun: error: lab4p1: task 46: Floating point exception (core dumped)
+srun: error: lab3p5: task 40: Floating point exception (core dumped)
+srun: error: lab6p9: task 63: Floating point exception (core dumped)
+srun: error: lab4p7: task 52: Floating point exception (core dumped)
+srun: error: lab3p3: task 38: Floating point exception (core dumped)
+srun: error: lab6p5: task 59: Floating point exception (core dumped)
+srun: error: lab6p6: task 60: Floating point exception (core dumped)
+srun: error: lab2p7: task 22: Floating point exception (core dumped)
+srun: error: lab0p8: task 7: Floating point exception (core dumped)
+srun: error: lab2p8: task 23: Floating point exception (core dumped)
+srun: error: lab0p7: task 6: Floating point exception (core dumped)
+srun: error: lab2p15: task 30: Floating point exception (core dumped)
+srun: error: lab1p6: task 13: Floating point exception (core dumped)
+srun: error: lab2p6: task 21: Floating point exception (core dumped)
+srun: error: lab4p8: task 53: Floating point exception (core dumped)
+srun: error: lab1p7: task 14: Floating point exception (core dumped)
+srun: error: lab1p8: task 15: Floating point exception (core dumped)
+srun: error: lab4p2: task 47: Floating point exception (core dumped)
+srun: error: lab4p5: task 50: Floating point exception (core dumped)
+srun: error: lab4p9: task 54: Floating point exception (core dumped)
+srun: error: lab6p7: task 61: Floating point exception (core dumped)
+srun: error: lab4p6: task 51: Floating point exception (core dumped)
+srun: error: lab0p6: task 5: Floating point exception (core dumped)
+srun: error: lab2p14: task 29: Floating point exception (core dumped)
+srun: error: lab2p16: task 31: Floating point exception (core dumped)
+srun: error: lab3p9: task 44: Floating point exception (core dumped)
+
+Command: OMP_NUM_THREADS=4 srun -n 64 ./parsim/src/parsim -11 3500 20 500000 10
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+Total procs: 64; should be less than ncside: 20
+1984.878 1625.992
+35
+18.8s
+
+Finished run for 64 MPI process(es) with 4 OpenMP thread(s) each.
+All tests complete.

@@ -1,0 +1,248 @@
+Using OMP_THREADS=2
+======================================
+Running with 16 MPI process(es) across 16 node(s)
+OpenMP threads per process: 2
+======================================
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim 1 5000 100 1000000 4
+slurmstepd: error: *** STEP 57313.0 ON lab2p1 CANCELLED AT 2025-04-04T17:56:19 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p2: task 1: Killed
+srun: error: lab2p1: task 0: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab5p4: task 5: Killed
+srun: error: lab5p3: task 4: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab6p4: task 10: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab6p5: task 11: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim 1 5000 100 1000000 100
+slurmstepd: error: *** STEP 57313.1 ON lab2p1 CANCELLED AT 2025-04-04T17:56:24 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p1: task 0: Killed
+srun: error: lab2p2: task 1: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab5p3: task 4: Killed
+srun: error: lab6p4: task 10: Killed
+srun: error: lab5p4: task 5: Killed
+srun: error: lab6p7: task 13: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim 1 5000 20 1000000 10
+slurmstepd: error: *** STEP 57313.2 ON lab2p1 CANCELLED AT 2025-04-04T17:56:28 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p1: task 0: Killed
+srun: error: lab2p2: task 1: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab5p4: task 5: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab6p4: task 10: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab5p3: task 4: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim 1 1000 3 10000 10000
+slurmstepd: error: *** STEP 57313.3 ON lab2p1 CANCELLED AT 2025-04-04T17:56:33 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p2: task 1: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab5p3: task 4: Killed
+srun: error: lab5p4: task 5: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab2p1: task 0: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab6p4: task 10: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim 3 5000 50 1000000 300
+slurmstepd: error: *** STEP 57313.4 ON lab2p1 CANCELLED AT 2025-04-04T17:56:37 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p3: task 2: Killed
+srun: error: lab2p1: task 0: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab5p3: task 4: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab5p4: task 5: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab2p2: task 1: Killed
+srun: error: lab6p4: task 10: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim 3 5000 50 1000000 500
+slurmstepd: error: *** STEP 57313.5 ON lab2p1 CANCELLED AT 2025-04-04T17:56:42 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p1: task 0: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab6p4: task 10: Killed
+srun: error: lab2p2: task 1: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab5p3: task 4: Killed
+srun: error: lab5p4: task 5: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim -1 1000 30 100000 1000
+slurmstepd: error: *** STEP 57313.6 ON lab2p1 CANCELLED AT 2025-04-04T17:56:46 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p1: task 0: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab2p2: task 1: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab5p4: task 5: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab6p4: task 10: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab5p3: task 4: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim 12672 0.05 3 10 10
+slurmstepd: error: *** STEP 57313.7 ON lab2p1 CANCELLED AT 2025-04-04T17:56:51 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p4: task 3: Killed
+srun: error: lab5p4: task 5: Killed
+srun: error: lab2p1: task 0: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab2p2: task 1: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab5p3: task 4: Killed
+srun: error: lab6p4: task 10: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim 5893 0.05 3 10 10
+slurmstepd: error: *** STEP 57313.8 ON lab2p1 CANCELLED AT 2025-04-04T17:56:56 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p1: task 0: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab6p4: task 10: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab2p2: task 1: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab5p3: task 4: Killed
+srun: error: lab5p4: task 5: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim 8555 0.05 3 10 10
+slurmstepd: error: *** STEP 57313.9 ON lab2p1 CANCELLED AT 2025-04-04T17:57:00 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p1: task 0: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab2p2: task 1: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab5p4: task 5: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab6p4: task 10: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab5p3: task 4: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim 12 100 5 10000 10000
+slurmstepd: error: *** STEP 57313.10 ON lab2p1 CANCELLED AT 2025-04-04T17:57:05 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p1: task 0: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab2p2: task 1: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab5p4: task 5: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab5p3: task 4: Killed
+srun: error: lab6p4: task 10: Killed
+
+Command: OMP_NUM_THREADS=2 srun -n 16 ./parsim/src/parsim -11 3500 20 500000 10
+slurmstepd: error: *** STEP 57313.11 ON lab2p1 CANCELLED AT 2025-04-04T17:57:09 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: lab2p1: task 0: Killed
+srun: error: lab5p4: task 5: Killed
+srun: error: lab6p1: task 7: Killed
+srun: error: lab2p4: task 3: Killed
+srun: error: lab6p4: task 10: Killed
+srun: error: lab6p2: task 8: Killed
+srun: error: lab6p3: task 9: Killed
+srun: error: lab6p7: task 13: Killed
+srun: error: lab6p6: task 12: Killed
+srun: error: lab6p9: task 15: Killed
+srun: error: lab2p3: task 2: Killed
+srun: error: lab6p8: task 14: Killed
+srun: error: lab6p5: task 11: Killed
+srun: error: lab2p2: task 1: Killed
+srun: error: lab5p5: task 6: Killed
+srun: error: lab5p3: task 4: Killed
+
+Finished run for 16 MPI process(es) with 2 OpenMP thread(s) each.
+All tests complete.
