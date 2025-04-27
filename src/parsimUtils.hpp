@@ -68,5 +68,4 @@ void debugForce(const std::string &label1, const std::string &label2, double dx,
 void debugCollision(const std::string &label1, const std::string &label2,
                     double &d);
 } // namespace Simulation
-
 #endif // PARSIMUTILS_HPP

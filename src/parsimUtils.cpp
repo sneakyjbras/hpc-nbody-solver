@@ -3,7 +3,6 @@ using namespace std;
 #include "parsimUtils.hpp"
 
 namespace Simulation {
-
 void debugParticle(const Particle p, uint64_t i) {
   std::cout << std::fixed
             << std::setprecision(

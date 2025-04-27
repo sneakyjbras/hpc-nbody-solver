@@ -1,32 +1,34 @@
 #ifndef DS_HPP
 #define DS_HPP
 
+#include "macros.hpp"
 #include <algorithm>
 #include <omp.h>
 #include <queue>
 #include <unordered_set>
 #include <vector>
 
-#include "macros.hpp"
-
 namespace Simulation {
+
 /**
- * @brief Represents a particle in the simulation.
+ * @brief Represents a particle within the simulation.
  *
- * Contains properties such as position, velocity, mass, and force, along with a
- * list of colliding particles. Provides inline methods to reset its state,
- * update its motion, and manage collisions.
+ * This structure encapsulates a particle's state, including its spatial
+ * coordinates, velocity, mass, and accumulated force. It also maintains a list
+ * of colliding particles. Inline methods are provided for state resetting and
+ * motion updates.
  */
 struct Particle {
-  double x, y;   ///< Position of the particle.
-  double vx, vy; ///< Velocity components.
+  double x, y;   ///< X and Y coordinates of the particle.
+  double vx, vy; ///< Velocity components along the x and y axes.
   double m;      ///< Mass of the particle.
-  double fx, fy; ///< Accumulated force components.
-  std::vector<Particle *>
-      collidingParticles; ///< List of pointers to particles that are colliding
-                          ///< with this one.
+  double fx, fy; ///< Accumulated force components in the x and y directions.
+
+  /// List of pointers to particles colliding with this particle.
+  std::vector<Particle *> collidingParticles;
+
   /**
-   * @brief Resets the particle's position to the origin.
+   * @brief Resets the particle's position to the origin (0,0).
    */
   inline void resetPosition() {
     x = 0.0;
@@ -39,7 +41,7 @@ struct Particle {
   inline void resetMass() { m = 0.0; }
 
   /**
-   * @brief Resets the particle's velocity to zero.
+   * @brief Resets the particle's velocity components to zero.
    */
   inline void resetVelocity() {
     vx = 0.0;
@@ -47,7 +49,7 @@ struct Particle {
   }
 
   /**
-   * @brief Resets the force accumulators for a new timestep.
+   * @brief Resets the accumulated force components to zero.
    */
   inline void resetForce() {
     fx = 0.0;
@@ -55,7 +57,7 @@ struct Particle {
   }
 
   /**
-   * @brief Adds a force contribution to the particle.
+   * @brief Adds an incremental force to the particle's current force.
    *
    * @param dfx Additional force in the x-direction.
    * @param dfy Additional force in the y-direction.
@@ -66,14 +68,13 @@ struct Particle {
   }
 
   /**
-   * @brief Updates the particle's position based on its velocity and
-   * acceleration.
+   * @brief Computes the new position of the particle using basic kinematics.
    *
-   * The position is updated using a basic kinematic equation that accounts for
-   * the current velocity, applied force, and timestep DELTAT. The position is
-   * then wrapped around the simulation space.
+   * The updated position is calculated using the current velocity, force, mass,
+   * and a fixed timestep (DELTAT). The position is then wrapped around the
+   * simulation boundaries.
    *
-   * @param side The side length of the simulation area.
+   * @param side The side length of the simulation domain.
    */
   inline void computePos(double side) {
     x = x + vx * DELTAT + 0.5 * (fx / m) * DELTAT * DELTAT;
@@ -82,11 +83,10 @@ struct Particle {
   }
 
   /**
-   * @brief Wraps the particle's position around the simulation boundaries.
+   * @brief Applies periodic boundary conditions to the particle's position.
    *
-   * If the particle moves out of the bounds of the simulation space, its
-   * position is wrapped around to the opposite side, simulating periodic
-   * boundary conditions.
+   * If the particle exceeds the simulation boundaries, it is wrapped to the
+   * opposite side.
    *
    * @param side The side length of the simulation area.
    */
@@ -103,10 +103,10 @@ struct Particle {
   }
 
   /**
-   * @brief Updates the particle's velocity based on the applied force.
+   * @brief Updates the particle's velocity based on the accumulated force.
    *
-   * Uses the accumulated force and the particle's mass to compute the new
-   * velocity, accounting for the timestep DELTAT.
+   * The velocity update uses the formula: new velocity = current velocity +
+   * (force / mass) * DELTAT.
    */
   inline void computeVelocity() {
     vx = vx + (fx / m) * DELTAT;
@@ -114,7 +114,7 @@ struct Particle {
   }
 
   /**
-   * @brief Adds a particle to the colliding particles list.
+   * @brief Adds a pointer to another particle that is colliding with this one.
    *
    * @param par Pointer to the colliding particle.
    */
@@ -129,23 +129,22 @@ struct Particle {
 /**
  * @brief Represents the center of mass for a group of particles.
  *
- * Contains the cumulative mass and weighted position (x, y) of the particles,
- * along with an index for debugging purposes. Provides inline methods to update
- * and reset the center of mass.
+ * This structure accumulates the mass and weighted positions of particles,
+ * allowing the center of mass to be computed and normalized.
  */
 struct CenterOfMass {
-  double m;    ///< Total mass of the particles.
-  double x, y; ///< Position of the center of mass.
+  double m;    ///< Total mass accumulated.
+  double x, y; ///< Weighted sum of x and y coordinates.
 
   /**
-   * @brief Accumulates mass into the center of mass.
+   * @brief Adds an incremental mass to the current total.
    *
-   * @param dm Additional mass to be added.
+   * @param dm Additional mass to add.
    */
   inline void computeMass(double dm) { m += dm; }
 
   /**
-   * @brief Accumulates weighted position values into the center of mass.
+   * @brief Accumulates weighted position contributions.
    *
    * @param dx Weighted x-coordinate contribution.
    * @param dy Weighted y-coordinate contribution.
@@ -156,10 +155,10 @@ struct CenterOfMass {
   }
 
   /**
-   * @brief Normalizes the center of mass position.
+   * @brief Normalizes the position by dividing the accumulated position by the
+   * mass.
    *
-   * Divides the accumulated position by the total mass, provided the mass is
-   * non-zero. If the mass is zero, the position is reset to the origin.
+   * If the mass is zero, the position is reset to the origin.
    */
   inline void normalizePos() {
     if (m > 0) {
@@ -184,27 +183,39 @@ struct CenterOfMass {
 /**
  * @brief Represents a cell in the simulation grid.
  *
- * A cell holds pointers to particles currently within its bounds as well as a
- * queue for incoming particles that have moved into the cell. It also maintains
- * the center of mass for the particles within the cell.
+ * A cell is responsible for storing pointers to particles that reside within
+ * its boundaries, managing an incoming queue for particles that move in, and
+ * computing its own center of mass. It uses an OpenMP lock for safe concurrent
+ * access.
  */
 struct Cell {
   std::vector<Particle *>
       particles; ///< Pointers to particles currently in the cell.
-  std::vector<Particle *>
-      queue;              ///< Pointers to particles queued for addition.
-                          ///< //							  /
-  struct CenterOfMass cm; ///< Center of mass of the particles in the cell.
-
-  Cell() {}
+  std::vector<Particle *> queue; ///< Queue for incoming particles.
+  CenterOfMass cm;               ///< Center of mass for the cell.
+  omp_lock_t lock;               ///< OpenMP lock to protect cell data.
 
   /**
-   * @brief Constructs a cell with reserved capacity for particles.
+   * @brief Default constructor.
    *
-   * Reserves memory for both the particles vector and the incoming queue based
-   * on the expected number of particles.
+   * Initializes the OpenMP lock for the cell.
+   */
+  Cell() { omp_init_lock(&lock); }
+
+  /**
+   * @brief Destructor.
    *
-   * @param numParticles Anticipated number of particles in the cell.
+   * Destroys the OpenMP lock.
+   */
+  ~Cell() { omp_destroy_lock(&lock); }
+
+  /**
+   * @brief Constructs a cell with pre-reserved capacity.
+   *
+   * Pre-reserves memory for both the particles vector and the incoming queue
+   * based on the expected number of particles.
+   *
+   * @param numParticles Estimated number of particles for the cell.
    */
   Cell(uint64_t numParticles) {
     particles.reserve(numParticles);
@@ -212,20 +223,19 @@ struct Cell {
   }
 
   /**
-   * @brief Adds an incoming particle to the cell's queue.
+   * @brief Adds a particle pointer to the incoming queue.
    *
-   * Particles that move into the cell are first added to a queue and then later
-   * processed.
+   * Particles that move into the cell are initially stored in this queue.
    *
-   * @param p Pointer to the particle to be added.
+   * @param p Pointer to the incoming particle.
    */
   inline void addIncoming(Particle *p) { queue.push_back(p); }
 
   /**
-   * @brief Processes the incoming queue.
+   * @brief Processes the incoming particle queue.
    *
-   * Transfers all particles from the incoming queue to the main particles
-   * vector and then clears the queue.
+   * Transfers all particles from the queue to the main particles vector and
+   * then clears the queue.
    */
   void processIncoming() {
     for (uint64_t i = 0; i < queue.size(); i++) {
@@ -235,10 +245,9 @@ struct Cell {
   }
 
   /**
-   * @brief Adds a particle directly to the cell.
+   * @brief Directly adds a particle to the cell.
    *
-   * Directly inserts a particle pointer into the particles vector, bypassing
-   * the incoming queue.
+   * Inserts a particle pointer into the particles vector.
    *
    * @param particle Pointer to the particle to be added.
    */
@@ -247,8 +256,8 @@ struct Cell {
   /**
    * @brief Removes a particle from the cell.
    *
-   * Efficiently removes the particle at the given index by swapping it with the
-   * last particle and then removing the last element.
+   * Removes the particle at the specified index by swapping it with the last
+   * element and then popping the last element.
    *
    * @param index Index of the particle to remove.
    */
@@ -259,5 +268,7 @@ struct Cell {
     }
   }
 };
+
 } // namespace Simulation
+
 #endif // DS_HPP

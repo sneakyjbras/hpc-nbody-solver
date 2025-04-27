@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <cmath>
 
+namespace Simulation {
 /**
  * @brief Wraps the index around the grid boundaries.
  *
@@ -37,5 +38,5 @@ inline int32_t getIndex(double pos, double side, int32_t ncside) {
   computeWrap(idx, ncside);
   return idx;
 }
-
+} // namespace Simulation
 #endif // POINTCALCULATIONS_HPP

@@ -30,7 +30,6 @@ void initParticles(long userseed, double side, long ncside, long long nPart,
     rnd01 = rndNormal01;
     userseed = -userseed;
   }
-
   initR4Uni(userseed);
 
   for (i = 0; i < nPart; i++) {

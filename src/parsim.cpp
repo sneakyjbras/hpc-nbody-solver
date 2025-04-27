@@ -11,7 +11,10 @@ namespace Simulation {
 Parsim::Parsim(int32_t seed, double side, int32_t ncside, uint64_t nPart,
                int32_t tsteps)
     : seed(seed), side(side), ncside(ncside), nPart(nPart), tsteps(tsteps) {
-  particles = std::vector<Particle>(nPart);
+#pragma omp single
+  {
+    particles = std::vector<Particle>(nPart);
+  }
   initParticles(seed, side, ncside, nPart, particles.data());
 }
 Parsim::~Parsim() {}
@@ -22,23 +25,39 @@ uint64_t Parsim::simulate(std::unordered_set<Particle *> &visited,
   uint64_t collisions = 0;
   for (int32_t t = 0; t < tsteps; ++t) {
     computeCenterOfMass(idxStart, idxEnd);
+#pragma omp barrier
     computeGravitationalPull(idxStart, idxEnd);
+#pragma omp barrier
     computePositionVelocity(idxStart, idxEnd);
+#pragma omp barrier
     recomputeGrid(idxStart, idxEnd);
+#pragma omp barrier
     collisions += computeCollisions(visited, q, idxStart, idxEnd);
+#pragma omp barrier
   }
   return collisions;
 }
 
 void Parsim::allocateGrid() {
-  uint32_t total_cells = static_cast<uint64_t>(ncside) * ncside;
-  grid = std::vector<Cell>(total_cells);
-  for (uint64_t i = 0; i < total_cells; ++i) {
-    grid[i].particles.reserve((seed >= 0 ? 4 : 8) * nPart / (total_cells));
+
+  uint32_t totalCells = 0;
+#pragma omp single
+  {
+    totalCells = static_cast<uint64_t>(ncside) *
+                 ncside; // doesn't need to be initialized by N threads
+    grid = std::vector<Cell>(
+        totalCells); // doesn't need to be initialized by N threads
+  }
+
+#pragma omp for schedule(static)
+  for (uint64_t i = 0; i < totalCells; ++i) {
+    grid[i].particles.reserve((seed >= 0 ? 4 : 8) * nPart / totalCells);
   }
 }
 
 void Parsim::populateGrid() {
+#pragma omp for schedule(static) // contention of having N threads adding
+                                 // particles to the grid or having just one
   for (uint64_t i = 0; i < nPart; i++) {
     // Reset forces for the particle.
     particles[i].fx = 0;
@@ -52,7 +71,9 @@ void Parsim::populateGrid() {
     int32_t idx = row * ncside + col;
 
     // Insert the particle into the appropriate cell.
+    omp_set_lock(&grid[idx].lock);
     grid[idx].addParticle(&particles[i]);
+    omp_unset_lock(&grid[idx].lock);
   }
 }
 
@@ -195,14 +216,16 @@ void Parsim::computePositionVelocity(const int32_t &idxStart,
       par->computePos(side);
       par->computeVelocity();
       // Determine the particle's new cell coordinates
-      int32_t newRow = getIndex(par->y, side, ncside);
-      int32_t newCol = getIndex(par->x, side, ncside);
-      int32_t newIdx = newRow * ncside + newCol;
+      int32_t new_row = getIndex(par->y, side, ncside);
+      int32_t new_col = getIndex(par->x, side, ncside);
+      int32_t newIdx = new_row * ncside + new_col;
       if (newIdx != idx) {
         // Remove particle from current cell
         cell.removeParticle(i);
         // Lock the destination cell and add particle to its incoming queue
+        omp_set_lock(&grid[newIdx].lock);
         grid[newIdx].addIncoming(par);
+        omp_unset_lock(&grid[newIdx].lock);
       }
     }
   }
