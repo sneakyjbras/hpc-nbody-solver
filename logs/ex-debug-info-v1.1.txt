@@ -1,0 +1,223 @@
+./parsim 3 .05 3 10 10
+Particle 0: mass=1953.182 x=0.039 y=0.050 vx=-0.001 vy=0.000
+Particle 1: mass=109.388 x=0.039 y=0.011 vx=-0.001 vy=0.001
+Particle 2: mass=1649.219 x=0.008 y=0.037 vx=-0.000 vy=0.000
+Particle 3: mass=2733.929 x=0.040 y=0.023 vx=-0.001 vy=-0.001
+Particle 4: mass=2845.289 x=0.032 y=0.036 vx=-0.001 vy=-0.001
+Particle 5: mass=791.615 x=0.024 y=0.036 vx=0.001 vy=-0.001
+Particle 6: mass=3276.366 x=0.010 y=0.045 vx=0.001 vy=0.000
+Particle 7: mass=370.991 x=0.034 y=0.041 vx=-0.000 vy=-0.000
+Particle 8: mass=3255.540 x=0.025 y=0.015 vx=0.001 vy=0.000
+Particle 9: mass=3008.925 x=0.027 y=0.022 vx=-0.002 vy=-0.000
+Cell 0 x: 0.000 y: 0.000 m: 0.000
+Cell 1 x: 0.025 y: 0.015 m: 3255.540
+Cell 2 x: 0.039 y: 0.011 m: 109.388
+Cell 3 x: 0.000 y: 0.000 m: 0.000
+Cell 4 x: 0.027 y: 0.022 m: 3008.925
+Cell 5 x: 0.040 y: 0.023 m: 2733.929
+Cell 6 x: 0.009 y: 0.042 m: 4925.585
+Cell 7 x: 0.030 y: 0.036 m: 3636.904
+Cell 8 x: 0.039 y: 0.048 m: 2324.174
+P0/P7 mag: 0.458 fx: -0.233 fy: -0.394
+P0/C4 mag: 0.440 fx: -0.177 fy: -0.402
+P0/C7 mag: 1.667 fx: -0.930 fy: -1.383
+P0/C1 mag: 0.993 fx: -0.677 fy: 0.727
+P0/C5 mag: 0.480 fx: 0.006 fy: -0.480
+P0/C2 mag: 0.119 fx: -0.008 fy: 0.118
+P0/C3 mag: 0.000 fx: 0.000 fy: -0.000
+P0/C6 mag: 1.412 fx: 1.319 fy: -0.505
+P0/C0 mag: 0.000 fx: 0.000 fy: 0.000
+t=0
+Particle 0: mass=1953.182 x=0.039 y=0.050 vx=-0.001 vy=0.000
+Particle 1: mass=109.388 x=0.038 y=0.011 vx=-0.001 vy=0.001
+Particle 2: mass=1649.219 x=0.008 y=0.037 vx=-0.000 vy=0.001
+Particle 3: mass=2733.929 x=0.040 y=0.022 vx=-0.001 vy=-0.001
+Particle 4: mass=2845.289 x=0.032 y=0.036 vx=-0.001 vy=-0.001
+Particle 5: mass=791.615 x=0.024 y=0.035 vx=0.001 vy=-0.001
+Particle 6: mass=3276.366 x=0.010 y=0.045 vx=0.001 vy=0.000
+Particle 7: mass=370.991 x=0.034 y=0.041 vx=-0.001 vy=-0.001
+Particle 8: mass=3255.540 x=0.025 y=0.015 vx=0.002 vy=0.000
+Particle 9: mass=3008.925 x=0.027 y=0.022 vx=-0.002 vy=-0.000
+P0/P7 mag: 0.452 fx: -0.228 fy: -0.391
+P0/C4 mag: 0.437 fx: -0.177 fy: -0.400
+P0/C7 mag: 1.646 fx: -0.909 fy: -1.372
+P0/C1 mag: 1.007 fx: -0.681 fy: 0.742
+P0/C5 mag: 0.474 fx: 0.005 fy: -0.474
+P0/C2 mag: 0.117 fx: -0.009 fy: 0.117
+P0/C3 mag: 0.000 fx: 0.000 fy: -0.000
+P0/C6 mag: 1.399 fx: 1.308 fy: -0.498
+P0/C0 mag: 0.000 fx: 0.000 fy: 0.000
+t=1
+Particle 0: mass=1953.182 x=0.039 y=0.050 vx=-0.001 vy=0.000
+Particle 1: mass=109.388 x=0.038 y=0.011 vx=-0.002 vy=0.001
+Particle 2: mass=1649.219 x=0.008 y=0.037 vx=-0.000 vy=0.001
+Particle 3: mass=2733.929 x=0.039 y=0.022 vx=-0.002 vy=-0.001
+Particle 4: mass=2845.289 x=0.032 y=0.036 vx=-0.001 vy=-0.001
+Particle 5: mass=791.615 x=0.024 y=0.035 vx=0.002 vy=-0.001
+Particle 6: mass=3276.366 x=0.010 y=0.045 vx=0.001 vy=-0.000
+Particle 7: mass=370.991 x=0.034 y=0.041 vx=-0.001 vy=-0.001
+Particle 8: mass=3255.540 x=0.026 y=0.015 vx=0.002 vy=0.001
+Particle 9: mass=3008.925 x=0.027 y=0.022 vx=-0.002 vy=-0.001
+P0/P7 mag: 0.444 fx: -0.221 fy: -0.385
+P0/C4 mag: 0.435 fx: -0.177 fy: -0.397
+P0/C7 mag: 1.626 fx: -0.890 fy: -1.361
+P0/C1 mag: 1.019 fx: -0.682 fy: 0.758
+P0/C5 mag: 0.469 fx: 0.003 fy: -0.469
+P0/C2 mag: 0.115 fx: -0.010 fy: 0.114
+P0/C3 mag: 0.000 fx: 0.000 fy: -0.000
+P0/C6 mag: 1.386 fx: 1.297 fy: -0.489
+P0/C0 mag: 0.000 fx: 0.000 fy: 0.000
+t=2
+Particle 0: mass=1953.182 x=0.039 y=0.050 vx=-0.001 vy=-0.000
+Particle 1: mass=109.388 x=0.038 y=0.011 vx=-0.002 vy=0.001
+Particle 2: mass=1649.219 x=0.008 y=0.037 vx=0.000 vy=0.001
+Particle 3: mass=2733.929 x=0.039 y=0.022 vx=-0.002 vy=-0.001
+Particle 4: mass=2845.289 x=0.031 y=0.035 vx=-0.001 vy=-0.001
+Particle 5: mass=791.615 x=0.024 y=0.035 vx=0.002 vy=-0.001
+Particle 6: mass=3276.366 x=0.010 y=0.045 vx=0.001 vy=-0.000
+Particle 7: mass=370.991 x=0.034 y=0.041 vx=-0.001 vy=-0.002
+Particle 8: mass=3255.540 x=0.026 y=0.015 vx=0.002 vy=0.001
+Particle 9: mass=3008.925 x=0.027 y=0.022 vx=-0.002 vy=-0.001
+P0/P7 mag: 0.433 fx: -0.214 fy: -0.377
+P0/C4 mag: 0.432 fx: -0.176 fy: -0.394
+P0/C7 mag: 1.609 fx: -0.872 fy: -1.352
+P0/C1 mag: 1.030 fx: -0.679 fy: 0.774
+P0/C5 mag: 0.465 fx: 0.001 fy: -0.465
+P0/C2 mag: 0.112 fx: -0.010 fy: 0.112
+P0/C3 mag: 0.000 fx: 0.000 fy: -0.000
+P0/C6 mag: 1.372 fx: 1.286 fy: -0.480
+P0/C0 mag: 0.000 fx: 0.000 fy: 0.000
+t=3
+Particle 0: mass=1953.182 x=0.039 y=0.050 vx=-0.001 vy=-0.000
+Particle 1: mass=109.388 x=0.038 y=0.011 vx=-0.002 vy=0.001
+Particle 2: mass=1649.219 x=0.008 y=0.038 vx=0.000 vy=0.002
+Particle 3: mass=2733.929 x=0.039 y=0.022 vx=-0.002 vy=-0.001
+Particle 4: mass=2845.289 x=0.031 y=0.035 vx=-0.001 vy=-0.002
+Particle 5: mass=791.615 x=0.024 y=0.035 vx=0.002 vy=-0.001
+Particle 6: mass=3276.366 x=0.010 y=0.045 vx=0.001 vy=-0.001
+Particle 7: mass=370.991 x=0.034 y=0.040 vx=-0.001 vy=-0.002
+Particle 8: mass=3255.540 x=0.026 y=0.015 vx=0.002 vy=0.001
+Particle 9: mass=3008.925 x=0.027 y=0.022 vx=-0.001 vy=-0.001
+P0/P7 mag: 0.420 fx: -0.206 fy: -0.366
+P0/C4 mag: 0.429 fx: -0.176 fy: -0.392
+P0/C7 mag: 1.592 fx: -0.855 fy: -1.343
+P0/C1 mag: 1.038 fx: -0.674 fy: 0.790
+P0/C5 mag: 0.462 fx: -0.001 fy: -0.462
+P0/C2 mag: 0.110 fx: -0.011 fy: 0.109
+P0/C3 mag: 0.000 fx: 0.000 fy: -0.000
+P0/C6 mag: 1.359 fx: 1.275 fy: -0.471
+P0/C0 mag: 0.000 fx: 0.000 fy: 0.000
+t=4
+Particle 0: mass=1953.182 x=0.039 y=0.050 vx=-0.001 vy=-0.000
+Particle 1: mass=109.388 x=0.038 y=0.011 vx=-0.002 vy=0.001
+Particle 2: mass=1649.219 x=0.008 y=0.038 vx=0.000 vy=0.002
+Particle 3: mass=2733.929 x=0.039 y=0.022 vx=-0.002 vy=-0.001
+Particle 4: mass=2845.289 x=0.031 y=0.035 vx=-0.001 vy=-0.002
+Particle 5: mass=791.615 x=0.025 y=0.035 vx=0.003 vy=-0.001
+Particle 6: mass=3276.366 x=0.010 y=0.045 vx=0.001 vy=-0.001
+Particle 7: mass=370.991 x=0.034 y=0.040 vx=-0.002 vy=-0.002
+Particle 8: mass=3255.540 x=0.026 y=0.015 vx=0.002 vy=0.002
+Particle 9: mass=3008.925 x=0.027 y=0.022 vx=-0.001 vy=-0.001
+P0/P7 mag: 0.405 fx: -0.197 fy: -0.354
+P0/C4 mag: 0.427 fx: -0.175 fy: -0.389
+P0/C7 mag: 1.576 fx: -0.839 fy: -1.335
+P0/C1 mag: 1.043 fx: -0.664 fy: 0.804
+P0/C5 mag: 0.459 fx: -0.003 fy: -0.459
+P0/C2 mag: 0.107 fx: -0.011 fy: 0.106
+P0/C3 mag: 0.000 fx: 0.000 fy: -0.000
+P0/C6 mag: 1.345 fx: 1.263 fy: -0.460
+P0/C0 mag: 0.000 fx: 0.000 fy: 0.000
+t=5
+Particle 0: mass=1953.182 x=0.039 y=0.050 vx=-0.001 vy=-0.000
+Particle 1: mass=109.388 x=0.038 y=0.011 vx=-0.002 vy=0.001
+Particle 2: mass=1649.219 x=0.008 y=0.038 vx=0.001 vy=0.003
+Particle 3: mass=2733.929 x=0.039 y=0.022 vx=-0.003 vy=-0.001
+Particle 4: mass=2845.289 x=0.031 y=0.035 vx=-0.001 vy=-0.002
+Particle 5: mass=791.615 x=0.025 y=0.035 vx=0.003 vy=-0.001
+Particle 6: mass=3276.366 x=0.010 y=0.044 vx=0.001 vy=-0.001
+Particle 7: mass=370.991 x=0.034 y=0.040 vx=-0.002 vy=-0.003
+Particle 8: mass=3255.540 x=0.026 y=0.015 vx=0.002 vy=0.002
+Particle 9: mass=3008.925 x=0.026 y=0.022 vx=-0.001 vy=-0.001
+P0/P7 mag: 0.388 fx: -0.187 fy: -0.340
+P0/C4 mag: 0.423 fx: -0.174 fy: -0.386
+P0/C7 mag: 1.562 fx: -0.823 fy: -1.327
+P0/C1 mag: 1.045 fx: -0.651 fy: 0.818
+P0/C5 mag: 0.456 fx: -0.006 fy: -0.456
+P0/C2 mag: 0.103 fx: -0.012 fy: 0.103
+P0/C3 mag: 0.000 fx: 0.000 fy: -0.000
+P0/C6 mag: 1.330 fx: 1.252 fy: -0.449
+P0/C0 mag: 0.000 fx: 0.000 fy: 0.000
+t=6
+Particle 0: mass=1953.182 x=0.039 y=0.050 vx=-0.001 vy=-0.001
+Particle 1: mass=109.388 x=0.037 y=0.012 vx=-0.002 vy=0.002
+Particle 2: mass=1649.219 x=0.008 y=0.038 vx=0.001 vy=0.003
+Particle 3: mass=2733.929 x=0.038 y=0.022 vx=-0.003 vy=-0.001
+Particle 4: mass=2845.289 x=0.031 y=0.035 vx=-0.002 vy=-0.002
+Particle 5: mass=791.615 x=0.025 y=0.035 vx=0.003 vy=-0.001
+Particle 6: mass=3276.366 x=0.011 y=0.044 vx=0.001 vy=-0.001
+Particle 7: mass=370.991 x=0.033 y=0.040 vx=-0.002 vy=-0.003
+Particle 8: mass=3255.540 x=0.027 y=0.016 vx=0.002 vy=0.002
+Particle 9: mass=3008.925 x=0.026 y=0.022 vx=-0.001 vy=-0.002
+P0/P7 mag: 0.369 fx: -0.177 fy: -0.324
+P0/C4 mag: 0.420 fx: -0.172 fy: -0.383
+P0/C7 mag: 1.548 fx: -0.809 fy: -1.320
+P0/C1 mag: 1.043 fx: -0.633 fy: 0.829
+P0/C5 mag: 0.454 fx: -0.009 fy: -0.454
+P0/C2 mag: 0.100 fx: -0.013 fy: 0.099
+P0/C3 mag: 0.000 fx: 0.000 fy: -0.000
+P0/C6 mag: 1.316 fx: 1.241 fy: -0.438
+P0/C0 mag: 0.000 fx: 0.000 fy: 0.000
+t=7
+Particle 0: mass=1953.182 x=0.039 y=0.050 vx=-0.001 vy=-0.001
+Particle 1: mass=109.388 x=0.037 y=0.012 vx=-0.003 vy=0.002
+Particle 2: mass=1649.219 x=0.008 y=0.039 vx=0.001 vy=0.003
+Particle 3: mass=2733.929 x=0.038 y=0.022 vx=-0.003 vy=-0.001
+Particle 4: mass=2845.289 x=0.031 y=0.035 vx=-0.002 vy=-0.002
+Particle 5: mass=791.615 x=0.026 y=0.035 vx=0.004 vy=-0.001
+Particle 6: mass=3276.366 x=0.011 y=0.044 vx=0.001 vy=-0.001
+Particle 7: mass=370.991 x=0.033 y=0.039 vx=-0.002 vy=-0.004
+Particle 8: mass=3255.540 x=0.027 y=0.016 vx=0.002 vy=0.003
+Particle 9: mass=3008.925 x=0.026 y=0.022 vx=-0.001 vy=-0.002
+P0/C4 mag: 0.416 fx: -0.170 fy: -0.380
+P0/C7 mag: 1.800 fx: -0.928 fy: -1.543
+P0/C1 mag: 1.036 fx: -0.610 fy: 0.837
+P0/C5 mag: 0.453 fx: -0.012 fy: -0.453
+P0/C2 mag: 0.096 fx: -0.013 fy: 0.095
+P0/C3 mag: 0.000 fx: 0.000 fy: -0.000
+P0/C6 mag: 1.301 fx: 1.229 fy: -0.427
+P0/C0 mag: 0.000 fx: 0.000 fy: 0.000
+[Collision] P4/P5 Distance: 0.004558
+t=8
+Particle 0: mass=1953.182 x=0.039 y=0.050 vx=-0.001 vy=-0.001
+Particle 1: mass=109.388 x=0.037 y=0.012 vx=-0.003 vy=0.002
+Particle 2: mass=1649.219 x=0.008 y=0.039 vx=0.001 vy=0.004
+Particle 3: mass=2733.929 x=0.038 y=0.021 vx=-0.004 vy=-0.001
+Particle 4: mass=0.000 x=0.031 y=0.034 vx=-0.002 vy=-0.002
+Particle 5: mass=0.000 x=0.026 y=0.034 vx=0.005 vy=-0.001
+Particle 6: mass=3276.366 x=0.011 y=0.044 vx=0.000 vy=-0.002
+Particle 7: mass=370.991 x=0.033 y=0.039 vx=-0.003 vy=-0.004
+Particle 8: mass=3255.540 x=0.027 y=0.016 vx=0.002 vy=0.004
+Particle 9: mass=3008.925 x=0.026 y=0.021 vx=-0.001 vy=-0.003
+P0/C4 mag: 0.412 fx: -0.167 fy: -0.376
+P0/C7 mag: 0.327 fx: -0.156 fy: -0.288
+P0/C1 mag: 1.023 fx: -0.582 fy: 0.841
+P0/C5 mag: 0.452 fx: -0.016 fy: -0.452
+P0/C2 mag: 0.092 fx: -0.013 fy: 0.091
+P0/C3 mag: 0.000 fx: 0.000 fy: -0.000
+P0/C6 mag: 1.286 fx: 1.217 fy: -0.414
+P0/C0 mag: 0.000 fx: 0.000 fy: 0.000
+[Collision] P8/P9 Distance: 0.004502
+t=9
+Particle 0: mass=1953.182 x=0.039 y=0.049 vx=-0.001 vy=-0.001
+Particle 1: mass=109.388 x=0.037 y=0.012 vx=-0.003 vy=0.002
+Particle 2: mass=1649.219 x=0.008 y=0.039 vx=0.002 vy=0.005
+Particle 3: mass=2733.929 x=0.037 y=0.021 vx=-0.004 vy=-0.001
+Particle 4: mass=0.000 x=0.031 y=0.034 vx=-0.002 vy=-0.002
+Particle 5: mass=0.000 x=0.026 y=0.034 vx=0.005 vy=-0.001
+Particle 6: mass=3276.366 x=0.011 y=0.044 vx=0.000 vy=-0.002
+Particle 7: mass=370.991 x=0.033 y=0.038 vx=-0.003 vy=-0.004
+Particle 8: mass=0.000 x=0.027 y=0.017 vx=0.002 vy=0.004
+Particle 9: mass=0.000 x=0.026 y=0.021 vx=-0.000 vy=-0.004
+0.0s
+0.039 0.049
+2

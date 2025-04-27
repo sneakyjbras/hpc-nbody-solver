@@ -1,0 +1,293 @@
+======================================
+Running with OMP_NUM_THREADS=1
+======================================
+rm -f main.o parsim.o init_particles.o parsim_utils.o parsim
+Building parsim...
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c main.cpp -o main.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c parsim.cpp -o parsim.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c init_particles.cpp -o init_particles.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c parsim_utils.cpp -o parsim_utils.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp main.o parsim.o init_particles.o parsim_utils.o -o parsim
+Build succeeded. Running parsim commands...
+
+Command: ./parsim 1 5000 100 1000000 4
+3936.506 131.472
+4
+2.7s
+
+Command: ./parsim 1 5000 100 1000000 100
+3899.787 156.291
+163
+71.0s
+
+Command: ./parsim 1 5000 20 1000000 10
+3918.912 143.364
+19
+133.7s
+
+Command: ./parsim 1 1000 3 10000 10000
+287.788 261.446
+31
+438.7s
+
+Command: ./parsim 3 5000 50 1000000 300
+3819.032 25.659
+469
+455.7s
+
+Command: ./parsim 3 5000 50 1000000 500
+3738.436 58.743
+804
+756.7s
+
+Command: ./parsim -1 1000 30 100000 1000
+575.878 370.663
+1203
+121.4s
+
+Command: ./parsim 12672 0.05 3 10 10
+0.031 0.012
+2
+0.0s
+
+Command: ./parsim 5893 0.05 3 10 10
+0.002 0.035
+2
+0.0s
+
+Command: ./parsim 8555 0.05 3 10 10
+0.016 0.049
+1
+0.0s
+
+Command: ./parsim 12 100 5 10000 10000
+76.732 61.943
+2209
+78.6s
+
+Command: ./parsim -11 3500 20 500000 10
+1984.878 1625.992
+35
+125.1s
+
+All commands executed for OMP_NUM_THREADS=1.
+======================================
+Running with OMP_NUM_THREADS=2
+======================================
+rm -f main.o parsim.o init_particles.o parsim_utils.o parsim
+Building parsim...
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c main.cpp -o main.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c parsim.cpp -o parsim.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c init_particles.cpp -o init_particles.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c parsim_utils.cpp -o parsim_utils.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp main.o parsim.o init_particles.o parsim_utils.o -o parsim
+Build succeeded. Running parsim commands...
+
+Command: ./parsim 1 5000 100 1000000 4
+3936.506 131.472
+4
+2.2s
+
+Command: ./parsim 1 5000 100 1000000 100
+3899.787 156.291
+163
+52.2s
+
+Command: ./parsim 1 5000 20 1000000 10
+3918.912 143.364
+19
+109.2s
+
+Command: ./parsim 1 1000 3 10000 10000
+287.788 261.446
+31
+382.9s
+
+Command: ./parsim 3 5000 50 1000000 300
+3819.032 25.659
+469
+455.1s
+
+Command: ./parsim 3 5000 50 1000000 500
+3738.436 58.743
+804
+757.9s
+
+Command: ./parsim -1 1000 30 100000 1000
+575.878 370.663
+1203
+121.3s
+
+Command: ./parsim 12672 0.05 3 10 10
+0.031 0.012
+2
+0.0s
+
+Command: ./parsim 5893 0.05 3 10 10
+0.002 0.035
+2
+0.0s
+
+Command: ./parsim 8555 0.05 3 10 10
+0.016 0.049
+1
+0.0s
+
+Command: ./parsim 12 100 5 10000 10000
+76.732 61.943
+2209
+78.1s
+
+Command: ./parsim -11 3500 20 500000 10
+1984.878 1625.992
+35
+124.7s
+
+All commands executed for OMP_NUM_THREADS=2.
+======================================
+Running with OMP_NUM_THREADS=4
+======================================
+rm -f main.o parsim.o init_particles.o parsim_utils.o parsim
+Building parsim...
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c main.cpp -o main.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c parsim.cpp -o parsim.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c init_particles.cpp -o init_particles.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c parsim_utils.cpp -o parsim_utils.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp main.o parsim.o init_particles.o parsim_utils.o -o parsim
+Build succeeded. Running parsim commands...
+
+Command: ./parsim 1 5000 100 1000000 4
+3936.506 131.472
+4
+0.8s
+
+Command: ./parsim 1 5000 100 1000000 100
+3899.787 156.291
+163
+16.8s
+
+Command: ./parsim 1 5000 20 1000000 10
+3918.912 143.364
+19
+28.1s
+
+Command: ./parsim 1 1000 3 10000 10000
+287.788 261.446
+31
+260.2s
+
+Command: ./parsim 3 5000 50 1000000 300
+3819.032 25.659
+469
+126.1s
+
+Command: ./parsim 3 5000 50 1000000 500
+3738.436 58.743
+804
+208.7s
+
+Command: ./parsim -1 1000 30 100000 1000
+575.878 370.663
+1203
+32.4s
+
+Command: ./parsim 12672 0.05 3 10 10
+0.031 0.012
+2
+0.0s
+
+Command: ./parsim 5893 0.05 3 10 10
+0.002 0.035
+2
+0.0s
+
+Command: ./parsim 8555 0.05 3 10 10
+0.016 0.049
+1
+0.0s
+
+Command: ./parsim 12 100 5 10000 10000
+76.732 61.943
+2209
+31.9s
+
+Command: ./parsim -11 3500 20 500000 10
+1984.878 1625.992
+35
+32.1s
+
+All commands executed for OMP_NUM_THREADS=4.
+======================================
+Running with OMP_NUM_THREADS=8
+======================================
+rm -f main.o parsim.o init_particles.o parsim_utils.o parsim
+Building parsim...
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c main.cpp -o main.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c parsim.cpp -o parsim.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c init_particles.cpp -o init_particles.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp -c parsim_utils.cpp -o parsim_utils.o
+g++ -Wall -Wextra -O2 -std=c++20 -fopenmp main.o parsim.o init_particles.o parsim_utils.o -o parsim
+Build succeeded. Running parsim commands...
+
+Command: ./parsim 1 5000 100 1000000 4
+3936.506 131.472
+4
+0.8s
+
+Command: ./parsim 1 5000 100 1000000 100
+3899.787 156.291
+163
+17.2s
+
+Command: ./parsim 1 5000 20 1000000 10
+3918.912 143.364
+19
+27.9s
+
+Command: ./parsim 1 1000 3 10000 10000
+287.788 261.446
+31
+229.1s
+
+Command: ./parsim 3 5000 50 1000000 300
+3819.032 25.659
+469
+125.8s
+
+Command: ./parsim 3 5000 50 1000000 500
+3738.436 58.743
+804
+209.4s
+
+Command: ./parsim -1 1000 30 100000 1000
+575.878 370.663
+1203
+38.1s
+
+Command: ./parsim 12672 0.05 3 10 10
+0.031 0.012
+2
+0.0s
+
+Command: ./parsim 5893 0.05 3 10 10
+0.002 0.035
+2
+0.0s
+
+Command: ./parsim 8555 0.05 3 10 10
+0.016 0.049
+1
+0.0s
+
+Command: ./parsim 12 100 5 10000 10000
+76.732 61.943
+2209
+43.3s
+
+Command: ./parsim -11 3500 20 500000 10
+1984.878 1625.992
+35
+32.6s
+
+All commands executed for OMP_NUM_THREADS=8.
+Script finished. Check the logs file for details.
