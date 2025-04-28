@@ -14,8 +14,6 @@ This script compiles (if necessary) and then runs the simulation with the proper
 
 The following folders contain:
 - `src/`: The source code of the project and its `Makefile`. The `main` function is found on the `main.cpp` file.
-- `utils/`: Scripts that were used by us to measure the memory and performance of the program.
-- `docs`: The project statement.
 - `logs`: The examples given by the faculty and our best scenario on the `lab1p1` machine at **RNL**.
 
 ## Overview of Optimizations
